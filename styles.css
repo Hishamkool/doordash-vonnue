@@ -5,11 +5,11 @@
     --font-size-heading-h2-24: 24;
     --font-size-heading-h3-18: 18;
     --font-size-subheading-24: 24;
-    --font-size-paragraph-14: 14;
-
-
-
-
+    --font-size-paragraph-14: 14; 
+}
+*{
+    background: black;
+    background-color: black;
 }
 
 
