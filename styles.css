@@ -1,0 +1,17 @@
+/* global variables */
+:root {
+    /* font sizes */
+    --font-size-heading-h1-32: 32;
+    --font-size-heading-h2-24: 24;
+    --font-size-heading-h3-18: 18;
+    --font-size-subheading-24: 24;
+    --font-size-paragraph-14: 14;
+
+
+
+
+}
+
+
+/* media querry */
+@media screen and(min-width:768px) {}
