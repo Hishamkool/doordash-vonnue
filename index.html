@@ -49,7 +49,13 @@
     </header>
     <!----------------------------------2. Main banner ---------------------------------->
     <section class="main-banner">
-        <img src="assets/images/png/hero_desktop.png" alt="dashboard main background">
+
+        <picture>
+            <!-- Desktop / Tablet -->
+            <source srcset="assets/images/png/hero_desktop.png" media="(min-width: 768px)">
+            <!-- Mobile -->
+            <img src="assets/images/avif/hero_mobile.avif" alt="dashboard main background">
+        </picture>
         <h1>$0 Delivery Fee on First Order</h1>
         <div class="input-field">
             <img src="assets/images/svg/search-icon.svg" alt="search-icon" class="search-icon">
@@ -359,12 +365,60 @@
     <section class="tab-bar">
         <h2>Get more from your neighborhood</h2>
         <div class="tabbar-head">
-            
+            <a href="#">Top Cities</a>
+            <a href="#">Top Cuisines</a>
+            <a href="#">Top Chains</a>
         </div>
+        <!-- grid with column 1 or 4 -->
         <div class="neighborhood">
-            <!-- Tab bar titles  -->
             <!-- Tab bar content -->
-            <!-- see more text and arrow -->
+            <a href="#">New York</a>
+            <a href="#">Los Angeles</a>
+            <a href="#">Toronto</a>
+            <a href="#">Chicago</a>
+            <a href="#">Houston</a>
+            <a href="#">Brooklyn</a>
+            <a href="#">San Diego</a>
+            <a href="#">Las Vegas</a>
+            <a href="#">San Francisco</a>
+            <a href="#">Seattle</a>
+            <a href="#">Atlanta</a>
+            <a href="#">Queens</a>
+            <a href="#">Vancouver, BC</a>
+            <a href="#">Miami</a>
+            <a href="#">San Antonio</a>
+            <!-- see more -->
+            <span>See more</span><a href="#"><img src="assets/images/svg/modified-svg/see-more-arrow-down.svg"
+                    alt="down arrow"></a>
+            <div class="see-more-top-cities">
+                <a href="#">Tallahassee</a>
+                <a href="#">Bend</a>
+                <a href="#">Kamloops</a>
+                <a href="#">Tulsa</a>
+                <a href="#">Austin</a>
+                <a href="#">Salt Lake City</a>
+                <a href="#">Jacksonville</a>
+                <a href="#">Colorado Springs</a>
+                <a href="#">Wilmington</a>
+                <a href="#">Birmingham</a>
+                <a href="#">New Orleans</a>
+                <a href="#">Lexington</a>
+                <a href="#">Orlando</a>
+                <a href="#">Victoria</a>
+                <a href="#">Columbia</a>
+                <a href="#">Scottsdale</a>
+                <a href="#">Augusta</a>
+                <a href="#">Christchurch</a>
+                <a href="#">Milwaukee</a>
+                <a href="#">Pittsburgh</a>
+                <a href="#">Ft. Worth</a>
+                <a href="#">Huntsville</a>
+                <a href="#">Des Moines</a>
+                <a href="#">Quebec City</a>
+                <a href="#">All Cities</a>
+            </div>
+
+
         </div>
     </section>
 
@@ -372,10 +426,56 @@
     <footer>
         <!-- fex containers count 4 -->
         <section class="popular-categories">
-            <div class="category-1"></div>
-            <div class="category-2"></div>
-            <div class="category-3"></div>
-            <div class="category-4"></div>
+            <!-- Alcohol Australia -->
+            <div class="category-1">
+                <a href="#">Alcohol Australia</a>
+                <a href="#">Alcohol Delivery Australia</a>
+                <a href="#">Back To School Delivery</a>
+                <a href="#">Battle Of The Brands</a>
+                <a href="#">Beauty Stores</a>
+                <a href="#">Beauty Supply</a>
+                <a href="#">Catering Near Me</a>
+                <a href="#">Chips Ahoy Big Cookie</a>
+                <a href="#">Convenience Stores Canada</a>
+            </div>
+            <!-- Dashmart Near Me -->
+            <div class="category-2">
+                <a href="#">Dashmart Near Me</a>
+                <a href="#">Deck The Doorstep</a>
+                <a href="#">Diageo Holiday</a>
+                <a href="#">Drugstores Canada</a>
+                <a href="#">Diageo Holiday</a>
+                <a href="#">Drugstores Canada</a>
+                <a href="#">Flower Delivery</a>
+                <a href="#">Grocery Delivery Canada</a>
+                <a href="#">Grocery Retail Convenience</a>
+                <a href="#">Haleon Well Within Reach</a>
+                <a href="#">Halloween</a>
+            </div>
+            <!-- holiday hosting -->
+            <div class="category-3">
+                <a href="#">Holiday Hosting</a>
+                <a href="#">Hsa Bank</a>
+                <a href="#">Hsa Fsa Store</a>
+                <a href="#">Large Group Orders</a>
+                <a href="#">Local Eats Deserve Pepsi</a>
+                <a href="#">Make It Date Night</a>
+                <a href="#">Medicine Delivery</a>
+                <a href="#">Mothers Day</a>
+                <a href="#">Pepsi</a>
+            </div>
+            <!-- pet store near me -->
+            <div class="category-4">
+                <a href="#">Pet Store Near Me</a>
+                <a href="#">Pickleball</a>
+                <a href="#">Play For An Ultra</a>
+                <a href="#">Procter Gamble</a>
+                <a href="#">Retail Stores Near Me</a>
+                <a href="#">Seasonal Holidays</a>
+                <a href="#">Snap Ebt</a>
+                <a href="#">Valentines Day</a>
+                <a href="#">Winter Holidays</a>
+            </div>
         </section>
         <!-- flex container containing both app store download buttons and web links -->
         <div class="links-download-btn">
@@ -388,34 +488,37 @@
             <section class="web-links">
                 <div class="get-to-know-us">
                     <a href="#">About Us</a>
-                    <a href="#">About Us</a>
-                    <a href="#">About Us</a>
-                    <a href="#">About Us</a>
-                    <a href="#">About Us</a>
-                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Investors</a>
+                    <a href="#">Company Blog</a>
+                    <a href="#">Engineering Blog</a>
+                    <a href="#">Merchant Blog</a>
+                    <a href="#">Gift Cards</a>
+                    <a href="#">Promotions</a>
+                    <a href="#">Dasher Central</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Glassdoor</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Newsroom</a>
                 </div>
                 <div class="let-us-help-you">
-                    <a href="#">About Us</a>
-                    <a href="#">About Us</a>
-                    <a href="#">About Us</a>
-                    <a href="#">About Us</a>
-                    <a href="#">About Us</a>
-                    <a href="#">About Us</a>
+                    <a href="#">Account Details</a>
+                    <a href="#">Order History</a>
+                    <a href="#">Help</a>
                 </div>
                 <div class="doing-business">
-                    <a href="#">About Us</a>
-                    <a href="#">About Us</a>
-                    <a href="#">About Us</a>
-                    <a href="#">About Us</a>
-                    <a href="#">About Us</a>
-                    <a href="#">About Us</a>
+                    <a href="#">Become a Dasher</a>
+                    <a href="#">DoorDash Merchant</a>
+                    <a href="#">Get Dashers for Deliveries</a>
+                    <a href="#">Get DoorDash for Business</a>
                 </div>
             </section>
         </div>
         <!-- Flex (changes order in differrnt media querry) container containing terms of service... language change dropdown , social links -->
         <div class="flex-terms-lang-social">
             <div class="flex-terms-service">
-                <!-- class="icon" --> <img src="assets/images/svg/doordash-icon.svg" alt="doordash-icon">
+                <!-- class="icon" --> <a href=""><img src="assets/images/svg/doordash-icon-white-small.svg"
+                        alt="doordash-icon"></a>
                 <a href="#">Terms of Service</a>
                 <a href="#">Privacy</a>
                 <a href="#">Delivery Locations</a>
@@ -426,17 +529,17 @@
 
             <div class="language-drop-down">
                 <button>
-                    <img class="globe-icon" src="" alt="">
+                    <img class="globe-icon" src="assets/images/svg/globe-icon.svg" alt="globe-icon">
                     English (US)
-                    <img class="drop-down-icon" src="" alt="">
+                    <img class="drop-down-icon" src="assets/images/svg/arrow-down.svg" alt="arrow-down">
                 </button>
             </div>
 
 
             <div class="social-icons">
-                <!-- facebook -->
-                <!-- threads -->
-                <!-- instagram -->
+                <img src="assets/images/svg/facebook-icon.svg" alt="facebook-icon">
+                <img src="assets/images/svg/instagram-icon.svg" alt="instagram-icon">
+                <img src="assets/images/svg/threads-icon.svg" alt="instagram-icon">
             </div>
         </div>
 
