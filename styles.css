@@ -1,16 +1,45 @@
 /* global variables */
 :root {
+    /* font family */
+    --font-primary-tt-norms: "TT Norms", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-secondary: "Roboto", sans-serif;
+
     /* font sizes */
     --font-size-heading-h1-32: 32;
     --font-size-heading-h2-24: 24;
     --font-size-heading-h3-18: 18;
     --font-size-subheading-24: 24;
-    --font-size-paragraph-14: 14; 
+    --font-size-paragraph-14: 14;
 }
-*{
-    background: black;
-    background-color: black;
+
+@font-face {
+    font-family: "TT Norms";
+    src: url("/assets/fonts/TTNorms-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: "TT Norms";
+    src: url("/assets/fonts/TTNorms-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TT Norms";
+    src: url("/assets/fonts/TTNorms-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TT Norms";
+    src: url("/assets/fonts/TTNorms-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+}
+
 
 
 /* media querry */
