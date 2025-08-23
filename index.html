@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>DoorDash</title>
 </head>
 
@@ -12,74 +13,76 @@
     <header>
         <!-- Top header banner for mobile / Browse faster in app -->
         <section class="mobile-popup">
-            <div class="cntinue-app-top"> <!-- only change in class  -->
+            <div class="continue-app">
                 <div class="logo">
                     <img src="assets/images/svg/door-dash-icon-red.svg" alt="dashdoor red icon">
                 </div>
-                <div class="title">Browse faster in the app</div>
-                <div class="sub-title">$0 delivery fee on first order</div>
-                <div class="ratings">
-                    <span class:="stars">
-                        <img src="assets/images/svg/full-filled-star.svg" alt="full filled star">
-                        <img src="assets/images/svg/full-filled-star.svg" alt="full filled star">
-                        <img src="assets/images/svg/full-filled-star.svg" alt="full filled star">
-                        <img src="assets/images/svg/full-filled-star.svg" alt="full filled star">
-                        <img src="assets/images/svg/half-filled-star.svg" alt="half-filled-star">
-                    </span>
-                    <span>18.2M ratings</span>
+                <div class="title-description">
+                    <h3>Browse faster in the app</h3>
+                    <span class="sub-title">$0 delivery fee on first order</span>
+                    <div class="ratings">
+                        <span class="stars">
+                            <img src="assets/images/svg/full-filled-star.svg" alt="full filled star">
+                            <img src="assets/images/svg/full-filled-star.svg" alt="full filled star">
+                            <img src="assets/images/svg/full-filled-star.svg" alt="full filled star">
+                            <img src="assets/images/svg/full-filled-star.svg" alt="full filled star">
+                            <img src="assets/images/svg/half-filled-star.svg" alt="half-filled-star">
+                        </span>
+                        <span>18.2M ratings</span>
+                    </div>
                 </div>
-                <button class="open-btn">Open</button>
+                <div><button class="top-btn open-btn">Open</button></div>
             </div>
         </section>
         <!-- floating fixed header -->
         <nav class="floating-header">
-            <div class="doordash-logo">
-                <div class="icon">
-                    <img src="assets/images/svg/doordash-icon-white.svg" alt="doordash-icon" class="icon">
-                </div>
-                <div class="title">
-                    <img src="assets/images/svg/doordash-title-text.svg" alt="doordash-title-text">
-                </div>
-            </div>
-            <div class="actions">
-                <button>Login</button>
-                <button>Open App</button>
-            </div>
+
+
         </nav>
     </header>
     <!----------------------------------2. Main banner ---------------------------------->
     <section class="main-banner">
-
-        <picture>
-            <!-- Desktop / Tablet -->
-            <source srcset="assets/images/png/hero_desktop.png" media="(min-width: 768px)">
-            <!-- <img src="assets/images/png/hero_desktop.png" alt=""> -->
-            <!-- Mobile -->
-            <img src="assets/images/avif/hero_mobile.avif" alt="dashboard main background">
-        </picture>
-        <h1>$0 Delivery Fee on First Order</h1>
-        <div class="input-field">
-            <img src="assets/images/svg/search-icon.svg" alt="search-icon" class="search-icon">
-            <input type="text" placeholder="Enter delivery address">
-            <img src="assets/images/svg/arrow-right.svg" alt="right arrow" class="arrow">
+        <!-- website logo -->
+        <div class="doordash-logo">
+            <div class="icon">
+                <img src="assets/images/svg/doordash-icon-white.svg" alt="doordash-icon" class="icon">
+            </div>
+            <div class="title">
+                <img src="assets/images/svg/doordash-title-text.svg" alt="doordash-title-text" class="title">
+            </div>
         </div>
-        <div class="login-location-btn">
-            <button>
-                <img src="assets/images/svg/user-icon.svg" alt="user icon">
-                <span>Login</span>
-            </button>
-            <button>
-                <img src="assets/images/svg/navigation-top-right.svg" alt="use current location icon">
-                <span>Use current Location</span>
-
-            </button>
+        <!-- login and open buttons -->
+        <div class="actions">
+            <button class="top-btn">Login</button>
+            <button class="top-btn open-btn">Open App</button>
+        </div>
+        <!-- contents inside the image -->
+        <div class="alnctr-column">
+            <div class="heading">
+                <h1>$0 DELIVERY FEE ON FIRST ORDER</h1>
+            </div>
+            <div class="search-field">
+                <div class="search-icon"><img src="assets/images/svg/search-icon.svg" alt="search-icon"></div>
+                <input type="text" placeholder="Enter delivery address" class="input-address">
+                <div class="arrow"><img src="assets/images/svg/arrow-right.svg" alt="right arrow"></div>
+            </div>
+            <div class="login-location-btn">
+                <button>
+                    <img src="assets/images/svg/user-icon.svg" alt="user icon">
+                    <span>Login</span>
+                </button>
+                <button>
+                    <img src="assets/images/svg/navigation-top-right.svg" alt="use current location icon">
+                    <span>Use current Location</span>
+                </button>
+            </div>
         </div>
     </section>
 
 
     <!---------------------------------- 3. Continue in mobile container / Browse faster in app ---------------------------------->
     <section class="mobile-popup">
-        <div class="cntinue-app">
+        <div class="cntinue-app botom">
             <div class="logo">
                 <img src="assets/images/svg/door-dash-icon-red.svg" alt="dashdoor red icon">
             </div>
@@ -114,8 +117,8 @@
                     <div class="mn-title">
                         <h1>Become a Dasher</h1>
                     </div>
-                    <div class="mn-subtitile">As a delivery driver, make money and work on your schedule. Sign up in
-                        minutes.</div>
+                    <h3 class="mn-subtitile">As a delivery driver, make money and work on your schedule. Sign up in
+                        minutes.</h3>
                     <a href="#" class="mn-nav">
                         <span>Start earning</span>
                         <img src="assets/images/svg/arrow-right-red.svg" alt="right arrow">

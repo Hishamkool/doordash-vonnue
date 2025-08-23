@@ -6,11 +6,19 @@
 
     /* font sizes */
     --font-size-heading-h1-32: 32;
-    --font-size-heading-h2-24: 24;
-    --font-size-heading-h3-18: 18;
     --font-size-subheading-24: 24;
+    --font-size-heading-h3-18: 18;
     --font-size-paragraph-14: 14;
+    /* colors */
+    --color-button-primary--background-red: #eb1700ff;
+    --color-text-color-white: #ffffffff;
+    --color-text-default-black: #191919ff;
+    --color-text-subtitle-grey: #606060ff;
+
+
 }
+
+
 
 @font-face {
     font-family: "TT Norms";
@@ -39,6 +47,348 @@
     font-weight: 800;
     font-style: normal;
 }
+
+
+/* common styles */
+
+* {
+ 
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-primary-tt-norms);
+    outline: 1px solid grey !important; 
+    
+}
+
+body{
+}
+
+h1 {
+    font-size: var(--font-size-heading-h1-32);
+}
+
+h3 {
+    font-size: var(--font-size-heading-h3-18);
+    font-weight: 400;
+}
+
+/* for aligning items center */
+.alnctr-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.alnctr-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+/* ----------------------------------1. Header nav------------------------------------------ */
+
+/*section mobile-popup */
+
+/* popup  */
+.continue-app { 
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.continue-app .logo-description {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.continue-app .title-description{
+    flex-grow: 1;
+}
+
+.continue-app .title-description span {
+    color: var(--color-text-subtitle-grey);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    letter-spacing: -0.01px;
+
+}
+
+.continue-app .title-description h3 {
+    color: var(--color-text-default-black);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.01px;
+    line-height: 22px;
+}
+
+.ratings {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 100%;
+
+}
+
+.stars {
+    margin: 0 2px;
+    margin-right: 6px;
+    padding: 0;
+}
+ 
+
+/* base design for login open app and open */
+.top-btn {
+    border-radius: 999px;
+    min-height: 32px;
+    padding: 0 12px 0 12px;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    display: inline-block;
+    font-size: 16px;
+    color: rgb(25, 25, 25);
+    font-weight: 700;
+    letter-spacing: -0.01px;
+    background-color: #ffffffff;
+    /* display: block;
+    margin: 0;
+    padding: 0; */
+
+}
+
+/* open button design */
+.open-btn {
+    color: white;
+    text-align: center;
+    background-color: var(--color-button-primary--background-red);
+}
+
+.logo {
+    border-radius: 12px;
+    border: 1px solid #f1f1f1ff;
+}
+
+/*  <!-- floating fixed header --> */
+
+.floating-header {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+
+
+}
+
+
+
+
+/* <!----------------------------------2. Main banner ----------------------------------> */
+
+.main-banner {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    flex-direction: column;
+    background-image: url("assets/images/avif/hero_mobile.avif");
+    padding: 0px 8px;
+    height: 550px;
+    background-size: cover;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+ 
+}
+
+.main-banner .actions {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0px;
+    margin-top: 16px; 
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 24px;
+    padding-left: 16px;
+    gap: 8px;
+
+}
+
+.doordash-logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin: 20px 0;
+}
+.doordash-logo .icon{
+    height: 18;
+    width: 32;
+}
+.doordash-logo .title{
+    height: 13;
+    width: 112;
+}
+ 
+
+
+
+.main-banner .heading {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    line-height: 28px;
+    letter-spacing: 0px;
+
+}
+
+.main-banner .heading h1 {
+    /* font-family: var(--font-primary-tt-norms); */
+    font-family: TTNormsProCond-Blk, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 900;
+    font-size: 32px;
+    color: white;
+    text-align: center;
+    line-height: 28px;
+    letter-spacing: 0px;
+
+}
+
+/* search field contains input search and go button */
+.search-field {
+    border-radius: 32px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffffff;
+    padding: 6px 16px;
+}
+
+.search-field .arrow {
+    min-height: 40px;
+    border-radius: 9999px;
+    background-color: var(--color-button-primary--background-red);
+    color: var(--color-text-color-white);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* svg search and arrow */
+.search-field img {
+    height: 24px;
+    width: 24px;
+}
+
+.search-field .search-icon {
+    margin-right: 12px;
+}
+
+.search-field .input-address {
+    border: none;
+    outline: none;
+    text-overflow: ellipsis;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.01px;
+    margin-right: 12px;
+}
+
+/* container containing both the buttons */
+.login-location-btn {
+    display: inline-flex;
+    gap: 12px;
+    margin-top: 16px;
+
+}
+
+.login-location-btn button {
+    padding: 0 12px;
+    min-height: 32px;
+    border-radius: 9999px;
+    flex-grow: 1;
+    border: none;
+    width: auto;
+    cursor: pointer;
+    background-color: var(--color-text-color-white);
+    color: var(--color-text-default-black);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.login-location-btn button span {
+    margin-left: 4px;
+    font-size: var(--font-size-paragraph-14);
+    font-weight: 700;
+    line-height: 20px;
+    white-space: nowrap;
+
+
+}
+
+
+
+
+
+
+
+
+/* <!---------------------------------- 4. Main navigations ----------------------------------> */
+
+
+.main-navigations-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* .main-navigations-container>* {
+    display: flex;
+
+    flex-direction: row;
+} */
+
+.mn-logo {
+    height: 88px;
+    width: 88px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
