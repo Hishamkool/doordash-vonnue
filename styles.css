@@ -559,7 +559,7 @@ h3 {
 .blog-post .blog-card {
     display: flex;
     flex-direction: column;
-    padding: 20px; 
+    padding: 20px;
     min-width: 90%;
     align-items: center;
     /* justify-content: start;
@@ -704,6 +704,10 @@ h3 {
 
 /*<!---------------------------------- 8. Grid Posts / Helping you with to-dos and gifting ----------------------------------> */
 /* grid posts section */
+.grid-posts {
+    background-color: var(--color-background-grid-view-cream);
+
+}
 
 /* grid post heading section */
 .grid-posts .gp-hd {
@@ -711,8 +715,6 @@ h3 {
     display: flex;
     justify-content: center;
     padding: 40px 20px 20px;
-    background-color: var(--color-background-grid-view-cream);
-
 }
 
 /* heading style */
@@ -723,23 +725,69 @@ h3 {
 
 /* scroll continer with multiple cards */
 .grid-posts .grid-post-scroll {
-    padding: 20px;
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
-    width: 100%;
-    background-color: var(--color-background-grid-view-cream);
 }
 
-.grd-details {
-    /* display: flex; */
-    /* flex-direction: column; */
+.grid-card {
+    padding: 20px;
+    min-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: -10%;
+
+}
+
+.grid-card picture img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 4px ; /* unnecessary padding but real website has this */
+}
+.grid-card picture{
+    width: 100%;
+}
+.grid-card .grd-details {
     text-align: center;
     align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
+.grd-details h2 {
+
+    max-width: 90%;
+    margin-top: 20px;
+    color: var(--color-text-default-black);
+    font-family: var(--font-primary-tt-norms), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: var(--font-size-subheading-24);
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.01px;
+
+
+}
+
+.grd-details p {
+    margin-top: 10px;
+    color: var(--color-text-default-black);
+    font-family: var(--font-primary-tt-norms), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: var(--font-size-paragraph-14);
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.01px;
+}
+
+/* .grd-details { 
+    text-align: center;
+    align-items: center;
+} */
+
 /* must be above 18 desidgn */
-.grid-posts span.must-be {
+.grid-posts .grid-post-scroll .grd-details span.must-be {
     text-align: center;
     margin-top: 10px; 
     font-size: 12px;
