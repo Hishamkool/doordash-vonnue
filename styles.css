@@ -16,6 +16,7 @@
     --color-text-subtitle-grey: #606060ff;
     --color-background-light-white: #f7f7f7ff;
     --color-background-strong-white: #f1f1f1ff;
+    --color-background-grid-view-cream: rgb(254, 241, 238);
 
 
 }
@@ -55,15 +56,15 @@
 
 * {
 
-padding: 0;
+    padding: 0;
 
-margin: 0;
+    margin: 0;
 
-font-family: var(--font-primary-tt-norms);
+    font-family: var(--font-primary-tt-norms);
 
-/* outline: 1px solid rgb(188, 188, 188) !important; */
+    outline: 1px solid rgb(188, 188, 188) !important;
 
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 a {
@@ -558,7 +559,7 @@ h3 {
 .blog-post .blog-card {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 20px; 
     min-width: 90%;
     align-items: center;
     /* justify-content: start;
@@ -696,8 +697,57 @@ h3 {
     filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 2px 8px);
     margin-top: 10px;
     text-align: center;
+}
+
+/* <!---------------------------------- 7. Blog posts- Feed 2 / Convenience stores at your doorstep ----------------------------------> */
+
+
+/*<!---------------------------------- 8. Grid Posts / Helping you with to-dos and gifting ----------------------------------> */
+/* grid posts section */
+
+/* grid post heading section */
+.grid-posts .gp-hd {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px 20px;
+    background-color: var(--color-background-grid-view-cream);
 
 }
+
+/* heading style */
+.gp-hd h1 {
+    max-width: 300px;
+    text-align: center;
+}
+
+/* scroll continer with multiple cards */
+.grid-posts .grid-post-scroll {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    width: 100%;
+    background-color: var(--color-background-grid-view-cream);
+}
+
+.grd-details {
+    /* display: flex; */
+    /* flex-direction: column; */
+    text-align: center;
+    align-items: center;
+}
+
+/* must be above 18 desidgn */
+.grid-posts span.must-be {
+    text-align: center;
+    margin-top: 10px; 
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #191919ff;
+}
+
 
 
 

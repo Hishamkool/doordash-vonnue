@@ -209,9 +209,9 @@
                 <h2>DashPass is delivery for less</h2>
                 <!-- sub heading  -->
                 <!-- content -->
-                <span>Members get a $0 delivery fee on DashPass orders, 5% back on pickup orders, and so much more.
+                <p>Members get a $0 delivery fee on DashPass orders, 5% back on pickup orders, and so much more.
                     Plus,
-                    it's free for 30 days.</span>
+                    it's free for 30 days.</p>
                 <!-- button -->
                 <button class="blog-btn">
                     <h4>Get DashPass</h4>
@@ -230,7 +230,8 @@
                 <h2 class="hd-24-28-700">Get grocery and convenience store essentials</h2>
                 <h3 class="sh-18-22-700">Grocery delivery, exactly how you want it.</h3>
                 <!-- subtitle -->
-                <span class="des-14-20-500">Shop from home and fill your cart with fresh produce, frozen entrees, deli delights and more.</span>
+                <span class="des-14-20-500">Shop from home and fill your cart with fresh produce, frozen entrees, deli
+                    delights and more.</span>
                 <!-- button -->
                 <button class="blog-btn">
                     <h4>Shop Groceries</h4>
@@ -242,7 +243,8 @@
     <!---------------------------------- 7. Blog posts- Feed 2 / Convenience stores at your doorstep ---------------------------------->
 
     <section class="blog-post">
-        <article class="convenience-post">
+        <!-- convenience-post -->
+        <article class="blog-card">
             <!-- <img src="assets/images/png/convenience_desktop.png" alt="a plastic bag with items and bill"> -->
             <picture>
                 <source media="(min-width: 768px)" srcset="assets/images/avif/blog-posts/convenience_desktop.avif">
@@ -250,14 +252,16 @@
 
                 <img src="assets/images/avif/blog-posts/convenience_mobile.avif" alt="person eating pizza">
             </picture>
-            <!-- heading -->
-            <h2>Convenience stores at your doorstep</h2>
-            <!-- content -->
-            <span>Stock up on snacks, household essentials, candy, or vitamins — all delivered in under an hour.</span>
-            <!-- button -->
-            <button class="blog-btn">
-                <span>Shop Now</span>
-            </button>
+            <div class="blg-details">
+                <!-- heading -->
+                <h2>Convenience stores at your doorstep</h2>
+                <!-- content -->
+                <p>Stock up on snacks, household essentials, candy, or vitamins — all delivered in under an hour.</p>
+                <!-- button -->
+                <button class="blog-btn">
+                    <h4>Shop Now</h4>
+                </button>
+            </div>
         </article>
     </section>
 
@@ -265,81 +269,92 @@
     <!---------------------------------- 8. Grid Posts / Helping you with to-dos and gifting ---------------------------------->
 
     <section class="grid-posts">
-        <!-- Beauty-essentials -->
-        <article class="Beauty-essentials-post">
-            <picture>
-                <!-- Desktop / Tablet -->
-                <source srcset="assets/images/avif/grid/beauty_desktop.avif" media="(min-width: 768px)">
-                <!-- Mobile -->
-                <img src="assets/images/avif/grid/beauty_mobile.avif" alt="Beauty essentials image">
-            </picture>
-            <!-- heading -->
-            <h2>Beauty essentials from top brands</h2>
-            <!-- content -->
-            <span>Get all your beauty and self-care needs delivered at home or on-the-go</span>
-            <!-- button -->
-            <button class="blog-btn">
-                <span>Shop beauty</span>
-            </button>
-        </article>
-
-        <!-- flowers for any occation -->
-        <article class="Flowers-post">
-            <picture>
-                <!-- Desktop / Tablet -->
-                <source srcset="assets/images/avif/grid/flowers_desktop.avif" media="(min-width: 768px)">
-                <!-- Mobile -->
-                <img src="assets/images/avif/grid/flowers_mobile.avif" alt="Beauty essentials image">
-            </picture>
-            <!-- heading -->
-            <h2>Flowers for any occasion</h2>
-            <!-- content -->
-            <span>Shop hand-picked and thoughtfully-arranged blooms from florists near you.</span>
-            <!-- button -->
-            <button class="blog-btn">
-                <span>Send Flowers</span>
-            </button>
-        </article>
-
-        <!--Restock the minibar  -->
-        <article class="Restock-post">
-            <picture>
-                <!-- Desktop / Tablet -->
-                <source srcset="assets/images/avif/grid/alcohol_desktop.avif" media="(min-width: 768px)">
-                <!-- Mobile -->
-                <img src="assets/images/avif/grid/alcohol_mobile.avif" alt="Beauty essentials image">
-            </picture>
-            <!-- heading -->
-            <h2>Restock the minibar</h2>
-            <!-- content -->
-            <span>Hosting a get-together or need or need a special cocktail ingredient? Get liquor, beer, mixers,
-                champagne and wine delivered fast.*</span>
-            <!-- button -->
-            <button class="blog-btn">
-                <span>Shop Alcohol</span>
-            </button>
-            <span>*Must be 21+. Enjoy responsibly.</span>
-        </article>
-
-        <!--What your pets need, and want  -->
-        <article class="Restock-post">
-            <picture>
-                <!-- Desktop / Tablet -->
-                <source srcset="assets/images/avif/grid/pet_supplies_desktop.avif" media="(min-width: 768px)">
-                <!-- Mobile -->
-                <img src="assets/images/avif/grid/pet_supplies_mobile.avif" alt="Beauty essentials image">
-            </picture>
-            <!-- heading -->
-            <h2>What your pets need, and want</h2>
-            <!-- content -->
-            <span>Finally, something cat people and dog people agree on — pet supplies delivery. Shop pet food, chew
-                toys, and even costumes.</span>
-            <!-- button -->
-            <button class="blog-btn">
-                <span>Get Pet Supplies</span>
-            </button>
-
-        </article>
+        <div class="gp-hd">
+            <h1 class="hd-24-28-700">Helping you with to-dos and gifting</h1>
+        </div>
+        <div class="grid-post-scroll">
+            <!-- Beauty-essentials -->
+            <article class="grid-card">
+                <picture>
+                    <!-- Desktop / Tablet -->
+                    <source srcset="assets/images/avif/grid/beauty_desktop.avif" media="(min-width: 768px)">
+                    <!-- Mobile -->
+                    <img src="assets/images/avif/grid/beauty_mobile.avif" alt="Beauty essentials image">
+                </picture>
+                <div class="blg-details grd-details">
+                <!-- <div class="grd-details"> -->
+                    <!-- heading -->
+                    <h2>Beauty essentials from top brands</h2>
+                    <!-- content -->
+                    <p>Get all your beauty and self-care needs delivered at home or on-the-go</p>
+                    <!-- button -->
+                    <button class="blog-btn">
+                        <h4>Shop beauty</h4>
+                    </button>
+                </div>
+            </article>
+            <!-- flowers for any occation -->
+            <article class="Flowers-post">
+                <picture>
+                    <!-- Desktop / Tablet -->
+                    <source srcset="assets/images/avif/grid/flowers_desktop.avif" media="(min-width: 768px)">
+                    <!-- Mobile -->
+                    <img src="assets/images/avif/grid/flowers_mobile.avif" alt="Beauty essentials image">
+                </picture>
+                <div class="blg-details grd-details">
+                    <!-- heading -->
+                    <h2>Flowers for any occasion</h2>
+                    <!-- content -->
+                    <p>Shop hand-picked and thoughtfully-arranged blooms from florists near you.</p>
+                    <!-- button -->
+                    <button class="blog-btn">
+                        <h4>Send Flowers</h4>
+                    </button>
+                </div>
+            </article>
+            <!--Restock the minibar  -->
+            <article class="Restock-post">
+                <picture>
+                    <!-- Desktop / Tablet -->
+                    <source srcset="assets/images/avif/grid/alcohol_desktop.avif" media="(min-width: 768px)">
+                    <!-- Mobile -->
+                    <img src="assets/images/avif/grid/alcohol_mobile.avif" alt="Beauty essentials image">
+                </picture>
+                <div class="blg-details grd-details">
+                    <!-- heading -->
+                    <h2>Restock the minibar</h2>
+                    <!-- content -->
+                    <p>Hosting a get-together or need or need a special cocktail ingredient? Get liquor, beer, mixers,
+                        champagne and wine delivered fast.*</p>
+                    <!-- button -->
+                    <button class="blog-btn">
+                        <h4>Shop Alcohol</h4>
+                    </button>
+                </div>
+                <span class="must-be">*Must be 21+. Enjoy responsibly.</span>
+            </article>
+            <!--What your pets need, and want  -->
+            <article class="Restock-post">
+                <picture>
+                    <!-- Desktop / Tablet -->
+                    <source srcset="assets/images/avif/grid/pet_supplies_desktop.avif" media="(min-width: 768px)">
+                    <!-- Mobile -->
+                    <img src="assets/images/avif/grid/pet_supplies_mobile.avif" alt="Beauty essentials image">
+                </picture>
+                <div class="blg-details grd-details">
+                    <!-- heading -->
+                    <h2>What your pets need, and want</h2>
+                    <!-- content -->
+                    <p>Finally, something cat people and dog people agree on — pet supplies delivery. Shop pet food,
+                        chew
+                        toys, and even costumes.</p>
+                    <!-- button -->
+                    <button class="blog-btn">
+                        <h4>Get Pet Supplies</h4>
+                    </button>
+                </div>
+            </article>
+        </div>
 
     </section>
 
