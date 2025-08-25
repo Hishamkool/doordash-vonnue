@@ -14,6 +14,8 @@
     --color-text-color-white: #ffffffff;
     --color-text-default-black: #191919ff;
     --color-text-subtitle-grey: #606060ff;
+    --color-background-light-white: #f7f7f7ff;
+    --color-background-strong-white: #f1f1f1ff;
 
 
 }
@@ -52,15 +54,20 @@
 /* common styles */
 
 * {
- 
+
     padding: 0;
+
     margin: 0;
+
     font-family: var(--font-primary-tt-norms);
-    outline: 1px solid grey !important; 
-    
+
+    outline: 1px solid rgb(188, 188, 188) !important;
+
+    box-sizing: border-box;
 }
 
-body{
+a {
+    text-decoration: none;
 }
 
 h1 {
@@ -93,7 +100,7 @@ h3 {
 /*section mobile-popup */
 
 /* popup  */
-.continue-app { 
+.continue-app {
     display: flex;
     flex-direction: row;
     padding: 8px;
@@ -111,7 +118,8 @@ h3 {
     flex-direction: row;
     gap: 8px;
 }
-.continue-app .title-description{
+
+.continue-app .title-description {
     flex-grow: 1;
 }
 
@@ -139,6 +147,8 @@ h3 {
     align-items: center;
     justify-content: flex-start;
     max-width: 100%;
+    padding: 0;
+    margin: 0;
 
 }
 
@@ -147,7 +157,7 @@ h3 {
     margin-right: 6px;
     padding: 0;
 }
- 
+
 
 /* base design for login open app and open */
 .top-btn {
@@ -211,7 +221,7 @@ h3 {
     justify-content: center;
     background-repeat: no-repeat;
     background-position: center center;
- 
+
 }
 
 .main-banner .actions {
@@ -219,7 +229,7 @@ h3 {
     left: 0;
     right: 0;
     top: 0px;
-    margin-top: 16px; 
+    margin-top: 16px;
     display: flex;
     justify-content: flex-end;
     padding-right: 24px;
@@ -228,22 +238,29 @@ h3 {
 
 }
 
-.doordash-logo{
+.btm {
+    /* padding: 12px 12px; */
+    height: 40px;
+}
+
+.doordash-logo {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 8px;
     margin: 20px 0;
 }
-.doordash-logo .icon{
+
+.doordash-logo .icon {
     height: 18;
     width: 32;
 }
-.doordash-logo .title{
+
+.doordash-logo .title {
     height: 13;
     width: 112;
 }
- 
+
 
 
 
@@ -347,6 +364,48 @@ h3 {
 
 }
 
+/* <!---------------------------------- 3. Continue in mobile container / Browse faster in app ----------------------------------> */
+
+/* for bottom banner/popup  */
+.mobile-popup-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 auto;
+    background-color: var(--color-background-strong-white);
+    flex: 1 0 auto;
+    margin: 20px 20px 0;
+    border-radius: 12px;
+    border: 1px solid var(--color-background-light-white);
+    padding: 20px;
+
+}
+
+/* removing the top margin */
+.mobile-popup-bottom .continue-app {
+    /* margin-top: 0; */
+    margin: 0;
+    padding: 0;
+
+}
+
+.mobile-popup-bottom .continue-app .logo img {
+    height: 40;
+    width: 40;
+    padding: 10px;
+}
+
+.cntnu {
+    min-height: 40px;
+}
+
+.mobile-popup-bottom .continue-app .title-description h3 {
+    font-size: 18px;
+}
+
+
+
+
 
 
 
@@ -356,29 +415,88 @@ h3 {
 
 /* <!---------------------------------- 4. Main navigations ----------------------------------> */
 
+/* main navigation section */
+.main-navigations {
 
-.main-navigations-container {
     margin: 0 auto;
+    max-width: 768px;
+}
+
+/* complete section container */
+.main-navigations-container {
     display: flex;
     flex-direction: column;
-    text-align: center;
     justify-content: center;
-    align-items: center;
+    margin: 40px 0;
+    padding: 8px;
+    max-width: 100%;
+}
+
+/* main div contining the card */
+.main-navigations-container .mn-block {
+    display: flex;
+    flex-direction: row;
+    min-width: 360px;
+    width: 100%;
+    max-width: 100%;
+    padding: 16px 16px;
 
 }
 
-/* .main-navigations-container>* {
-    display: flex;
-
-    flex-direction: row;
-} */
-
+/* logo container */
 .mn-logo {
+    margin-right: 32px;
+}
+
+/* logo styling */
+.mn-logo img {
     height: 88px;
     width: 88px;
+}
+
+/* contains heading sub and a click */
+.details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px;
+}
+/* heading styles */
+.mn-title h1 {
+    font-weight: 700;
+    line-height: 40px;
+    color: var(--color-text-default-black);
+}
+
+/* subheading styles */
+.mn-subtitile {
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text-default-black);
+    font-family: var(--font-primary-tt-norms);
+}
+
+/* button */
+.mn-nav {
+    margin-top: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* button title */
+.mn-nav span {
+    color: var(--color-button-primary--background-red);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-right: 4px;
 
 }
 
+ 
 
 
 
@@ -390,6 +508,11 @@ h3 {
 
 
 
+/* <!---------------------------------- 7. Second banner / Get grocery and convenience----------------------------------> */
+
+.get-grocery-banner img {
+    max-width: 100vw;
+}
 
 
 /* media querry */
