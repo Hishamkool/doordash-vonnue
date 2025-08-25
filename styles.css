@@ -55,15 +55,15 @@
 
 * {
 
-    padding: 0;
+padding: 0;
 
-    margin: 0;
+margin: 0;
 
-    font-family: var(--font-primary-tt-norms);
+font-family: var(--font-primary-tt-norms);
 
-    outline: 1px solid rgb(188, 188, 188) !important;
+/* outline: 1px solid rgb(188, 188, 188) !important; */
 
-    box-sizing: border-box;
+box-sizing: border-box;
 }
 
 a {
@@ -104,6 +104,39 @@ h3 {
     font-weight: 700;
     line-height: 28px;
     letter-spacing: -0.01px;
+
+}
+
+/* subheading text style /size /line height / weight  .ikGhrl */
+.sh-18-22-700 {
+
+    color: #191919ff;
+    font-family: var(--font-primary-tt-norms), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.01;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* description text style /size /line height / weight  .gZAtbl */
+.des-14-20-500 {
+
+    color: #191919ff;
+    font-family: var(--font-primary-tt-norms), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.01;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+    margin: 0px;
+    padding: 0px;
 
 }
 
@@ -614,18 +647,59 @@ h3 {
 
 
 
-
-
-
-
-
-
-
 /* <!---------------------------------- 6. Second banner / Get grocery and convenience----------------------------------> */
 
-.get-grocery-banner img {
-    max-width: 100vw;
+/* section second banner */
+.second-banner {
+    width: 100%;
 }
+
+/* card */
+.get-grocery-banner {
+    background-image: url("assets/images/png/grocery_desktop.png");
+    height: 350px;
+    position: relative;
+    background: url("assets/images/png/grocery_desktop.png") center / cover no-repeat;
+}
+
+/* image contents */
+.get-grocery-banner .contents {
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: rgba(30, 30, 30, 0.6);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/* main heading */
+.contents h2 {
+    color: white;
+    filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 2px 8px);
+    max-width: 90%;
+    margin-top: 20px;
+}
+
+.contents h3 {
+    color: white;
+    filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 2px 8px);
+    margin-top: 10px;
+}
+
+.contents span {
+    color: white;
+    filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 2px 8px);
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+
 
 
 /* media querry */
