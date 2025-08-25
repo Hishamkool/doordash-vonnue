@@ -94,6 +94,19 @@ h3 {
     flex-direction: row;
 }
 
+/* common heading style */
+.hd-24-28-700 {
+    color: var(--color-text-default-black);
+    /*  #191919ff; */
+    font-family: var(--font-primary-tt-norms), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: var(--font-size-subheading-24);
+    /* 24 */
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.01px;
+
+}
+
 
 /* ----------------------------------1. Header nav------------------------------------------ */
 
@@ -461,6 +474,7 @@ h3 {
     width: 100%;
     max-width: 250px;
 }
+
 /* heading styles */
 .mn-title h1 {
     font-weight: 700;
@@ -486,6 +500,7 @@ h3 {
     justify-content: flex-start;
     align-items: center;
 }
+
 /* button title */
 .mn-nav span {
     color: var(--color-button-primary--background-red);
@@ -496,7 +511,106 @@ h3 {
 
 }
 
- 
+
+
+/* <!---------------------------------- 5. Blog posts- Feed 1 / Everything you crave.... ----------------------------------> */
+
+/* blog post session */
+.blog-post {
+    width: 100%;
+
+}
+
+/* card */
+.blog-post .blog-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    min-width: 90%;
+    align-items: center;
+    /* justify-content: start;
+    text-align: left; */
+}
+
+/* img container */
+.blog-post picture {
+    width: 100%;
+}
+
+/* styling the img */
+.blog-post picture img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* title subtile and button */
+.blg-details {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: start; */
+}
+
+.blg-details h2 {
+    max-width: 90%;
+    margin-top: 20px;
+    color: var(--color-text-default-black);
+    font-family: var(--font-primary-tt-norms), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: var(--font-size-subheading-24);
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.01px;
+
+}
+
+/* subheading */
+.blg-details span {
+    margin-top: 10px;
+    color: var(--color-text-default-black);
+    font-family: var(--font-primary-tt-norms), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: var(--font-size-heading-h3-18);
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.01px;
+}
+
+/* description */
+.blg-details p {
+    margin-top: 10px;
+    color: var(--color-text-default-black);
+    font-family: var(--font-primary-tt-norms), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: var(--font-size-paragraph-14);
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.01px;
+}
+
+/* button styling */
+.blog-btn {
+    margin-top: 20px;
+    display: flex;
+    min-height: 32px;
+    border-radius: 9999px;
+    cursor: pointer;
+    background-color: var(--color-button-primary--background-red);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    padding: 0 12px;
+    width: fit-content;
+    border: none;
+}
+
+/* button text */
+.blog-btn h4 {
+    margin: 0;
+    color: var(--color-text-color-white);
+    font-weight: 700;
+    line-height: 20px;
+    font-size: var(--font-size-paragraph-14);
+}
 
 
 
@@ -507,8 +621,7 @@ h3 {
 
 
 
-
-/* <!---------------------------------- 7. Second banner / Get grocery and convenience----------------------------------> */
+/* <!---------------------------------- 6. Second banner / Get grocery and convenience----------------------------------> */
 
 .get-grocery-banner img {
     max-width: 100vw;
