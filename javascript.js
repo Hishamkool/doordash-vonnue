@@ -22,11 +22,19 @@ seeMoreBtn.addEventListener("click", k => {
     seeMoreDiv.parentNode.appendChild(seeMoreDiv);
     arrow.classList.toggle('open');
     if (seeMoreContent.classList.contains('enable')) {
-        seeMoreText.textContent="See less";
-        
-    }else{
-        
-        seeMoreText.textContent="See More";
+        seeMoreText.textContent = "See less";
+
+    } else {
+
+        seeMoreText.textContent = "See More";
     }
     console.log("clicked see more button");
 });
+
+/* disbling navigations for all a tags */
+/* const a = document.querySelectorAll('a');
+a.forEach(anchortag =>{
+    anchortag.addEventListener("click" , e =>{
+        e.preventDefault();
+    });
+}); */

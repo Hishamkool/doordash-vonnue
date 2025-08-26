@@ -489,6 +489,7 @@
     <footer>
         <!-- fex containers count 4 -->
         <section class="popular-categories">
+            <h2 class="tb-hed-16-22-700 ft-hd">Popular Categories</h2>
             <!-- Alcohol Australia -->
             <div class="category-1">
                 <a href="#">Alcohol Australia</a>
@@ -544,12 +545,16 @@
         <div class="links-download-btn">
             <!-- App store and play store buttons -->
             <section class="appstore-buttons">
-                <button>Available in App Store</button>
-                <button>Available app in google play store</button>
+                <a href="#"><img id="appstore" src="assets/images/svg/download-appstore.svg"
+                        alt="appstore link button"></a>
+                <a href="#"><img id="playstore" src="assets/images/svg/download-playstore.svg"
+                        alt="playstore link button"></a>
             </section>
             <!-- Company links / get to know us , let us help you , doing bussiness -->
             <section class="web-links">
-                <div class="get-to-know-us">
+                <!--  get-to-know-us-->
+                <div class="wl-category">
+                    <h2 class="tb-hed-16-22-700 ft-hd">Get to Know Us</h2>
                     <a href="#">About Us</a>
                     <a href="#">Careers</a>
                     <a href="#">Investors</a>
@@ -564,12 +569,16 @@
                     <a href="#">Accessibility</a>
                     <a href="#">Newsroom</a>
                 </div>
-                <div class="let-us-help-you">
+                <!-- let-us-help-you -->
+                <div class="wl-category">
+                    <h2 class="tb-hed-16-22-700 ft-hd">Let Us Help You</h2>
                     <a href="#">Account Details</a>
                     <a href="#">Order History</a>
                     <a href="#">Help</a>
                 </div>
-                <div class="doing-business">
+                <!-- doing-business -->
+                <div class="wl-category">
+                    <h2 class="tb-hed-16-22-700 ft-hd">Doing Business</h2>
                     <a href="#">Become a Dasher</a>
                     <a href="#">DoorDash Merchant</a>
                     <a href="#">Get Dashers for Deliveries</a>
@@ -578,33 +587,34 @@
             </section>
         </div>
         <!-- Flex (changes order in differrnt media querry) container containing terms of service... language change dropdown , social links -->
-        <div class="flex-terms-lang-social">
-            <div class="flex-terms-service">
-                <!-- class="icon" --> <a href=""><img src="assets/images/svg/doordash-icon-white-small.svg"
-                        alt="doordash-icon"></a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Privacy</a>
-                <a href="#">Delivery Locations</a>
-                <a href="#">Do Not Sell or Share My Personal Information</a>
-                <div class="copyright">© 2025 DoorDash</div>
-            </div>
+        <section class="last-block">
+            <div class="terms-social-ln">
+                <!-- social icons -->
+                <div class="social-icons">
+                    <img src="assets/images/svg/facebook-icon.svg" alt="facebook-icon">
+                    <img src="assets/images/svg/instagram-icon.svg" alt="instagram-icon">
+                    <img src="assets/images/svg/threads-icon.svg" alt="instagram-icon">
+                </div>
+                <!-- language dropdown -->
+                <div class="language-drop-down">
+                    <div class="lan-dd-btn">
+                        <img class="globe-icon" src="assets/images/svg/globe-icon.svg" alt="globe-icon">
+                        <span>English (US)</span>
+                        <img class="drop-down-icon" src="assets/images/svg/arrow-down.svg" alt="arrow-down">
+                        </div.lan-dd-btn>
+                    </div>
+                </div>
+                <!-- terms of service -->
+                <div class="terms-service">
+                    <a href=""><img src="assets/images/svg/doordash-icon-white-small.svg" alt="doordash-icon"></a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Delivery Locations</a>
+                    <a href="#">Do Not Sell or Share My Personal Information</a>
+                    <a href="#" class="copyright">© 2025 DoorDash</a>
+                </div>
 
-
-            <div class="language-drop-down">
-                <button>
-                    <img class="globe-icon" src="assets/images/svg/globe-icon.svg" alt="globe-icon">
-                    English (US)
-                    <img class="drop-down-icon" src="assets/images/svg/arrow-down.svg" alt="arrow-down">
-                </button>
-            </div>
-
-
-            <div class="social-icons">
-                <img src="assets/images/svg/facebook-icon.svg" alt="facebook-icon">
-                <img src="assets/images/svg/instagram-icon.svg" alt="instagram-icon">
-                <img src="assets/images/svg/threads-icon.svg" alt="instagram-icon">
-            </div>
-        </div>
+        </section>
 
     </footer>
 
