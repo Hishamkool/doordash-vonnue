@@ -423,12 +423,12 @@
     <section class="tab-bar">
         <h2>Get more from your neighborhood</h2>
         <div class="tabbar-head">
-            <a href="#">Top Cities</a>
-            <a href="#">Top Cuisines</a>
-            <a href="#">Top Chains</a>
+            <a href="#" class="tb-hed-16-22-700 selected">Top Cities</a>
+            <a href="#" class="tb-hed-16-22-700">Top Cuisines</a>
+            <a href="#" class="tb-hed-16-22-700">Top Chains</a>
         </div>
         <!-- grid with column 1 or 4 -->
-        <div class="neighborhood">
+        <div class="tab-content">
             <!-- Tab bar content -->
             <a href="#">New York</a>
             <a href="#">Los Angeles</a>
@@ -445,10 +445,8 @@
             <a href="#">Vancouver, BC</a>
             <a href="#">Miami</a>
             <a href="#">San Antonio</a>
-            <!-- see more -->
-            <span>See more</span><a href="#"><img src="assets/images/svg/modified-svg/see-more-arrow-down.svg"
-                    alt="down arrow"></a>
-            <div class="see-more-top-cities">
+            <!-- hidden list visible when clicked on see more -->
+            <span class="see-more-top-cities">
                 <a href="#">Tallahassee</a>
                 <a href="#">Bend</a>
                 <a href="#">Kamloops</a>
@@ -474,9 +472,16 @@
                 <a href="#">Des Moines</a>
                 <a href="#">Quebec City</a>
                 <a href="#">All Cities</a>
-            </div>
 
+            </span>
+        </div>
 
+        <!-- see more button -->
+        <div class="see-more">
+            <span>See more</span>
+            <button id="see-more-btn">
+                <img id="arrow" src="assets/images/svg/modified-svg/see-more-arrow-down.svg" alt="down arrow">
+            </button>
         </div>
     </section>
 
