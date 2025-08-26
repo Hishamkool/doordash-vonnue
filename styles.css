@@ -56,15 +56,15 @@
 
 * {
 
-    padding: 0;
+padding: 0;
 
-    margin: 0;
+margin: 0;
 
-    font-family: var(--font-primary-tt-norms);
+font-family: var(--font-primary-tt-norms);
 
-    outline: 1px solid rgb(188, 188, 188) !important;
+outline: 1px solid !important;
 
-    box-sizing: border-box;
+box-sizing: border-box;
 }
 
 a {
@@ -555,6 +555,7 @@ h3 {
 
 }
 
+
 /* card */
 .blog-post .blog-card {
     display: flex;
@@ -796,7 +797,21 @@ h3 {
     color: #191919ff;
 }
 
+/*<!---------------------------------- 9. Blog posts- Feed 3 / Unlocking opportunity for Dashers and businesses----------------------------------> */
+/* heading container */
+.blog-post .bp-hd{
+    padding: 40px 20px 20px;
+    width: 100%;
+    background-color: var(--color-text-color-white);
+    display: flex;
+    justify-content: center;
+}
+/* heading style */
+.blog-post .bp-hd h1{
+    text-align: center;
+    max-width: 300px; 
 
+}
 
 
 
