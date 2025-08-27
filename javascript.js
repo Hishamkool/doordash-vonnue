@@ -32,9 +32,9 @@ seeMoreBtn.addEventListener("click", k => {
 });
 
 /* disbling navigations for all a tags */
-/* const a = document.querySelectorAll('a');
+const a = document.querySelectorAll('a');
 a.forEach(anchortag =>{
     anchortag.addEventListener("click" , e =>{
         e.preventDefault();
     });
-}); */
+});

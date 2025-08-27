@@ -36,8 +36,18 @@
         </section>
         <!-- floating fixed header -->
         <nav class="floating-header">
+            <div class="floating-navigation">
+                <div class="search-field">
+                    <div class="search-icon"><img src="assets/images/svg/search-icon.svg" alt="search-icon"></div>
+                    <input type="text" placeholder="Enter delivery address" class="input-address">
+                    <div class="arrow"><img src="assets/images/svg/arrow-right.svg" alt="right arrow"></div>
+                </div>
+                <div class="actions">
+                    <button class="top-btn btm">Login</button>
+                    <button class="top-btn btm open-btn">Open App</button>
+                </div>
 
-
+            </div>
         </nav>
     </header>
     <!----------------------------------2. Main banner ---------------------------------->
@@ -169,7 +179,7 @@
     <!---------------------------------- 5. Blog posts- Feed 1 / Everything you crave.... ---------------------------------->
     <section class="blog-post">
         <!-- everything you crave -->
-        <div class="blog-card">
+        <div class="blog-card bc-first">
             <!-- image -->
             <picture>
                 <!-- Desktop / Tablet -->
@@ -194,8 +204,10 @@
                 </button>
             </div>
         </div>
+
+
         <!-- DashPass is delivery for less -->
-        <div class="blog-card">
+        <div class="blog-card bc-second">
             <!-- img -->
             <picture>
                 <source media="(min-width: 768px)" srcset="assets/images/avif/blog-posts/dashpass_desktop.png">
@@ -370,7 +382,7 @@
             <h1 class="hd-24-28-700">Unlocking opportunity for Dashers and businesses</h1>
         </div>
         <!-- Sign up to dash and get paid -->
-        <article class="blog-card">
+        <article class="blog-card bc-first">
             <picture>
                 <!-- Desktop / Tablet -->
                 <source srcset="assets/images/avif/blog-posts/become_a_dasher_desktop.avif" media="(min-width: 768px)">
@@ -393,7 +405,7 @@
 
 
         <!-- Grow your business with DoorDash -->
-        <article class="blog-card">
+        <article class="blog-card bc-second">
             <picture>
                 <!-- Desktop / Tablet -->
                 <source srcset="assets/images/avif/blog-posts/work_with_doordash_desktop.avif"

@@ -57,15 +57,21 @@
 
 * {
 
-padding: 0;
+    padding: 0;
 
-margin: 0;
+    margin: 0;
 
-font-family: var(--font-primary-tt-norms);
+    font-family: var(--font-primary-tt-norms);
 
-/* outline: 1px solid black !important; */
+    /* outline: 1px solid black !important; */
 
-box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+
 }
 
 a {
@@ -258,11 +264,46 @@ h3 {
 /*  <!-- floating fixed header --> */
 
 .floating-header {
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    width: 100%;
+    max-width: 100%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+    padding: 12px 8px;
+    justify-content: space-between;
+}
+
+.floating-header .floating-navigation {
     display: flex;
     flex-direction: row;
-    position: absolute;
+    width: 100%;
+    overflow: scroll;
 
+}
 
+/* actions inside floating navigations */
+.floating-header .actions { 
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 50%;  
+}
+
+/* search field inside floating navigations */
+.floating-header .search-field {
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 50%;  
+}
+
+.floating-header .search-field .input-address {
+    
 }
 
 
@@ -480,19 +521,21 @@ h3 {
 
 /* main navigation section */
 .main-navigations {
-
     margin: 0 auto;
-    max-width: 768px;
+
 }
 
 /* complete section container */
 .main-navigations-container {
+    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: 40px 0;
     padding: 8px;
-    max-width: 100%;
+    /* max-width: 768px; */
 }
 
 /* main div contining the card */
@@ -500,9 +543,11 @@ h3 {
     display: flex;
     flex-direction: row;
     min-width: 360px;
-    width: 100%;
-    max-width: 100%;
+    /* width: 100%; */
+    /* max-width: 100%; */
+
     padding: 16px 16px;
+
 
 }
 
@@ -581,6 +626,17 @@ h3 {
     align-items: center;
     /* justify-content: start;
     text-align: left; */
+}
+
+/* negative padding on the first child */
+.blog-post .bc-first {
+    margin-bottom: -300px;
+}
+
+/* second blog post with a background on second child */
+.blog-post .bc-second {
+    background-color: rgb(254, 241, 238);
+    padding-top: 320px;
 }
 
 /* img container */
@@ -762,8 +818,10 @@ h3 {
     height: 180px;
     width: 100%;
     object-fit: cover;
-    margin-bottom: 4px;
     /* unnecessary padding but real website has this */
+    margin-bottom: 4px;
+
+
 }
 
 .grid-card picture {
@@ -1049,7 +1107,7 @@ footer .popular-categories {
     background-color: rgb(73, 73, 73);
     border-radius: 8px;
     padding: 2px 8px;
- 
+
 }
 
 /* web links section */
@@ -1135,8 +1193,10 @@ footer .popular-categories {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    column-gap: 12px;
+    /* either set this or use margin left for each element >a */
 }
+
 .terms-service a {
     color: rgb(196, 196, 196);
     font-size: 12px;
@@ -1145,4 +1205,16 @@ footer .popular-categories {
 }
 
 /* media querry */
-@media screen and(min-width:768px) {}
+@media screen and (min-width:768px) {
+
+    /* <!---------------------------------- 5. Blog posts- Feed 1 / Everything you crave.... ----------------------------------> */
+    /*  .blog-post .blog-card { 
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        min-width: 90%; 
+    }
+    .blog-post .blog-card:nth-child(){
+        order: 1;
+    } */
+}
