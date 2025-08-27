@@ -33,8 +33,24 @@ seeMoreBtn.addEventListener("click", k => {
 
 /* disbling navigations for all a tags */
 const a = document.querySelectorAll('a');
-a.forEach(anchortag =>{
-    anchortag.addEventListener("click" , e =>{
+a.forEach(anchortag => {
+    anchortag.addEventListener("click", e => {
         e.preventDefault();
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => { 
+    /* to make floating header visible after scrolling to search field */
+    const floatingHeader = document.querySelector('.floating-header');
+    const searchField = document.querySelector('.main-banner .search-field');
+
+    window.addEventListener("scroll", () => {
+        const targetLocation = searchField.offsetTop + searchField.offsetHeight;
+        if (window.scrollY > targetLocation) {
+            floatingHeader.classList.add("visible");
+        } else {
+            floatingHeader.classList.remove("visible");
+        }
+        console.log("page scrolled");
     });
 });
