@@ -39,7 +39,8 @@ a.forEach(anchortag => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", () => { 
+/* floating navigation bar */
+document.addEventListener("DOMContentLoaded", () => {
     /* to make floating header visible after scrolling to search field */
     const floatingHeader = document.querySelector('.floating-header');
     const searchField = document.querySelector('.main-banner .search-field');
@@ -54,3 +55,41 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("page scrolled");
     });
 });
+
+/* changing login text to sign up for desktop in multiple places one in header and one in actions */
+
+const loginBtns = document.querySelectorAll(".loginbtn");
+const openAppBtns = document.querySelectorAll(".openappbtn");
+
+function updateButtonText() {
+    if (window.innerWidth >= 768) {
+        loginBtns.forEach(
+            login => {
+                login.textContent = "Sign In";
+                login.classList.add("open-btn");
+            }
+        );
+        openAppBtns.forEach(open => {
+            open.textContent = "Sign Up";
+            open.classList.remove("open-btn");
+        });
+
+
+    } else {
+
+        loginBtns.forEach(
+            login => {
+                login.textContent = "Login";
+                login.classList.remove("open-btn");
+            }
+        );
+        openAppBtns.forEach(open => {
+            open.textContent = "Open App";
+            open.classList.add("open-btn");
+        });
+
+    }
+}
+updateButtonText();
+
+window.addEventListener("resize", updateButtonText);

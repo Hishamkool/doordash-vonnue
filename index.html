@@ -12,7 +12,7 @@
     <!----------------------------------1. Header nav ------------------------------------>
     <header>
         <!-- Top header banner for mobile / Browse faster in app -->
-        <section class="mobile-popup-top">
+        <section class="mobile-popup top">
             <div class="continue-app">
                 <div class="logo">
                     <img src="assets/images/svg/door-dash-icon-red.svg" alt="dashdoor red icon">
@@ -37,14 +37,25 @@
         <!-- floating fixed header -->
         <nav class="floating-header">
             <div class="floating-navigation">
-                <div class="search-field">
+                <div class="doordash-logo fn-ddlogo">
+                    <div class="icon">
+                        <img src="assets/images/svg/modified-svg/doordash-icon-red.svg" alt="doordash-icon"
+                            class="icon">
+                    </div>
+                    <div class="title">
+                        <img src="assets/images/svg/modified-svg/doordash-title-text-red.svg" alt="doordash-title-text"
+                            class="title">
+                    </div>
+                </div>
+                <div class="search-field fn-search">
                     <div class="search-icon"><img src="assets/images/svg/search-icon.svg" alt="search-icon"></div>
                     <input type="text" placeholder="Enter delivery address" class="input-address">
                     <div class="arrow"><img src="assets/images/svg/arrow-right.svg" alt="right arrow"></div>
                 </div>
-                <div class="actions">
-                    <button class="top-btn btm">Login</button>
-                    <button class="top-btn btm open-btn">Open App</button>
+                <!--  -->
+                <div class="actions fn-actions">
+                    <button class="top-btn btm loginbtn">Login</button>
+                    <button class="top-btn btm open-btn openappbtn">Open App</button>
                 </div>
 
             </div>
@@ -53,7 +64,7 @@
     <!----------------------------------2. Main banner ---------------------------------->
     <section class="main-banner">
         <!-- website logo -->
-        <div class="doordash-logo">
+        <div class="doordash-logo desktop-ddlogo">
             <div class="icon">
                 <img src="assets/images/svg/doordash-icon-white.svg" alt="doordash-icon" class="icon">
             </div>
@@ -63,8 +74,8 @@
         </div>
         <!-- login and open buttons -->
         <div class="actions">
-            <button class="top-btn btm">Login</button>
-            <button class="top-btn btm open-btn">Open App</button>
+            <button class="top-btn btm loginbtn" id="loginbtn">login </button>
+            <button class="top-btn btm open-btn openappbtn" id="openappbtn"> open app </button>
         </div>
         <!-- contents inside the image -->
         <div class="alnctr-column">
@@ -91,7 +102,7 @@
 
 
     <!---------------------------------- 3. Continue in mobile container / Browse faster in app ---------------------------------->
-    <section class="mobile-popup-bottom">
+    <section class="mobile-popup mobile-popup-bottom">
         <div class="continue-app">
             <div class="logo">
                 <img src="assets/images/svg/door-dash-icon-red.svg" alt="dashdoor red icon">
@@ -604,8 +615,8 @@
                 <!-- social icons -->
                 <div class="social-icons">
                     <img src="assets/images/svg/facebook-icon.svg" alt="facebook-icon">
+                    <img src="assets/images/svg/threads-icon.svg" alt="threads-icon">
                     <img src="assets/images/svg/instagram-icon.svg" alt="instagram-icon">
-                    <img src="assets/images/svg/threads-icon.svg" alt="instagram-icon">
                 </div>
                 <!-- language dropdown -->
                 <div class="language-drop-down">

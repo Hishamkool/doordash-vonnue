@@ -259,12 +259,21 @@ h3 {
 .logo {
     border-radius: 12px;
     border: 1px solid #f1f1f1ff;
+    background-color: #ffffff;
+    padding: 8px;
+
 }
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
 
 /*  <!-- floating fixed header --> */
 
 
-.floating-header { 
+.floating-header {
     position: fixed;
     top: 0px;
     left: 0px;
@@ -275,14 +284,20 @@ h3 {
     box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     padding: 12px 8px;
     justify-content: space-between;
-    transform: translateY(-100%);/* now invisible */
+    transform: translateY(-100%);
+    /* now invisible */
     transition: 300ms ease-in-out;
 }
 
 /* making it visible */
- .floating-header.visible{
+.floating-header.visible {
     transform: translateY(0%);
- }
+}
+
+.floating-header .fn-ddlogo {
+    display: none;
+}
+
 .floating-header .floating-navigation {
     display: flex;
     width: 100%;
@@ -293,29 +308,29 @@ h3 {
 }
 
 /* search field inside floating navigations */
-.floating-header .search-field {
-    flex: 1 1 45%;
+.fn-search {
+    flex: 0 1 auto;
     min-width: 0;
     padding: 6px 16px;
 }
 
-.floating-header .search-field .input-address {
-    flex: 1 1 auto;
+.fn-search .input-address {
+    flex: 0 1 auto;
     min-width: 0;
 
 }
 
-/* actions inside floating navigations */
-.floating-header .actions {
-    flex: 1 1 50%;
+/* login and open inside floating navigations */
+.fn-actions {
+    flex: 0 1 auto;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 
 }
 
-.floating-header .search-field .arrow {
-    flex: 1 1 auto;
+.fn-search .arrow {
+    flex: 0 1 auto;
     min-width: 40px;
 }
 
@@ -358,6 +373,7 @@ h3 {
     gap: 8px;
 
 }
+
 
 .btm {
     /* padding: 12px 12px; */
@@ -514,7 +530,7 @@ h3 {
 .mobile-popup-bottom .continue-app .logo img {
     height: 40;
     width: 40;
-    padding: 10px;
+    /*  padding: 10px; */
 }
 
 .cntnu {
@@ -748,7 +764,7 @@ h3 {
 
 /* card */
 .get-grocery-banner {
-     
+
     height: 350px;
     position: relative;
     background: url("assets/images/png/grocery_desktop.png") center / cover no-repeat;
@@ -1224,6 +1240,39 @@ footer .popular-categories {
 
 /* media querry */
 @media screen and (min-width:768px) {
+
+    /* <!----------------------------------1. Header nav ------------------------------------> */
+    /* disabling mobile popup */
+    .mobile-popup {
+        display: none;
+    }
+
+    .floating-header{
+        padding: 4px 8px;
+    }
+    /* floating navigations */
+    .floating-header .fn-ddlogo {
+        display: flex; 
+    
+    }
+    /* to not display set in header */
+    .floating-header .fn-search{
+        display: none;
+    }
+
+    /* <!----------------------------------2. Main banner ----------------------------------> */
+    /* changing background image for desktop */
+    .main-banner {
+        background-image: url("assets/images/png/hero_desktop.png");
+
+    }
+
+    .desktop-ddlogo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
     /* <!---------------------------------- 5. Blog posts- Feed 1 / Everything you crave.... ----------------------------------> */
     /*  .blog-post .blog-card { 
