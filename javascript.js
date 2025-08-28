@@ -11,23 +11,30 @@ alltabs.forEach(currenttab => {
 });
 
 /* see more button and list visibility  */
-const seeMoreContent = document.querySelector('.see-more-top-cities');
+const hiddenList = document.querySelectorAll('.see-more-top-cities');
 const seeMoreBtn = document.getElementById('see-more-btn');
 const seeMoreDiv = document.querySelector('.see-more');
 const seeMoreText = seeMoreDiv.querySelector('span');
 const arrow = document.getElementById('arrow');
+
+
 seeMoreBtn.addEventListener("click", k => {
-    seeMoreContent.classList.toggle('enable');
-    /* moving see more to the end of the list */
-    seeMoreDiv.parentNode.appendChild(seeMoreDiv);
+
+    hiddenList.forEach(hiddenItem => {
+        hiddenItem.classList.toggle("enable");
+
+    });
     arrow.classList.toggle('open');
-    if (seeMoreContent.classList.contains('enable')) {
-        seeMoreText.textContent = "See less";
+    if (hiddenList[0].classList.contains('enable')) {
+        seeMoreText.textContent = "See Less";
 
     } else {
 
         seeMoreText.textContent = "See More";
     }
+
+    /* moving see more to the end of the list */
+    /*  seeMoreDiv.parentNode.appendChild(seeMoreDiv); */
     console.log("clicked see more button");
 });
 

@@ -916,10 +916,7 @@ p {
     letter-spacing: -0.01px;
 }
 
-/* .grd-details { 
-    text-align: center;
-    align-items: center;
-} */
+
 
 /* must be above 18 desidgn */
 .grid-posts .grid-post-scroll .grd-details span.must-be {
@@ -1016,7 +1013,7 @@ p {
     line-height: 22px;
     letter-spacing: -0.01;
     text-decoration: none;
-    display: block;
+
 }
 
 /* see more button container */
@@ -1067,33 +1064,25 @@ p {
 
 /* see more items list container */
 .see-more-top-cities {
-    display: flex;
-    /* not visible by default */
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    opacity: 0;
+    display: none;
+    /* opacity: 0;
     max-height: 0;
     overflow: hidden;
-    transition: 1s ease-in;
+    transform: scaleY(0.95);
+    transition:
+        opacity 0.3s ease,
+        max-height 0.4s ease,
+        transform 0.3s ease; */
 }
 
-/* making see more visible */
+/* when enabled */
 .see-more-top-cities.enable {
-    max-height: 1000px;
-    opacity: 1;
+    display: block;
+    /*  opacity: 1;
+    max-height: fit-content; 
+    transform: scaleY(1); */
 }
 
-/* content see more list  */
-.see-more-top-cities a {
-    color: var(--color-text-default-black);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 22px;
-    letter-spacing: -0.01;
-    text-decoration: none;
-    display: block;
-}
 
 
 
@@ -1101,29 +1090,42 @@ p {
 footer {
     width: 100vw;
     background-color: var(--color-text-default-black);
-    /* background-color: yellow; */
-    display: flex;
     padding: 0 20px;
-    flex-direction: column;
-    max-width: 1160px;
     margin: auto;
+
 }
 
-/* delete this  */
+footer .ft-wdt {
+    max-width: 1160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+footer .ft-hd {
+    text-align: center; 
+    margin-bottom: 8px;
+}
+footer .ft-heading h2{
+    padding-top: 32px;
+}
+
 
 /* populat categories container with 4 div/categories */
+footer .ft-hd {
+    text-align: center;
+}
+
 footer .popular-categories {
     text-align: center;
-    padding-top: 32px;
     padding-bottom: 32px;
     display: flex;
     flex-direction: column;
 }
 
-/* heading style */
-.popular-categories h2 {
-    margin-bottom: 8px;
-}
+
+
 
 /* the 4 catergories styling */
 .popular-categories>div {
@@ -1131,7 +1133,7 @@ footer .popular-categories {
     flex-direction: column;
     flex: 1 1 0%;
     gap: 12px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 /* links style */
@@ -1212,7 +1214,7 @@ footer .popular-categories {
 
 .language-drop-down {
 
-    padding: 12px;
+    padding: 0 12px;
 
 }
 
@@ -1482,7 +1484,35 @@ footer .popular-categories {
         width: 100%;
     }
 
+    /* <!---------------------------------- 11. Footer / Popular...----------------------------------> */
+    footer .popular-categories {
+        flex-direction: row;
+        gap: 12px;
+        text-align: left;
+    }
 
+    footer .ft-heading .ft-hd{
+        text-align: left;
+    }
+
+    .web-links{
+        flex-direction: row;
+        justify-content: space-between;
+  
+    }
+    .wl-category{
+        text-align: left;
+    }
+    
+    /* last block */
+    .last-block .terms-social-ln{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: start;
+    }
+    .terms-service{
+        margin-top: 0;
+    }
 
 }
 
