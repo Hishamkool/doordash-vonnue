@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const loginBtns = document.querySelectorAll(".loginbtn");
 const openAppBtns = document.querySelectorAll(".openappbtn");
+const loginBottom = document.querySelector('.login-location-btn .llb-login-btn span');
 
 function updateButtonText() {
     if (window.innerWidth >= 768) {
@@ -82,9 +83,10 @@ function updateButtonText() {
             open.classList.remove("open-btn");
         });
 
-
+        loginBottom.textContent = "Sign In"
+        
     } else {
-
+        
         loginBtns.forEach(
             login => {
                 login.textContent = "Login";
@@ -95,7 +97,8 @@ function updateButtonText() {
             open.textContent = "Open App";
             open.classList.add("open-btn");
         });
-
+        
+        loginBottom.textContent = "Login"
     }
 }
 updateButtonText();

@@ -63,7 +63,7 @@
 
     font-family: var(--font-primary-tt-norms);
 
-    outline: 1px solid black !important;
+    /* outline: 1px solid pink !important; */
 
 }
 
@@ -1104,10 +1104,11 @@ footer .ft-wdt {
 }
 
 footer .ft-hd {
-    text-align: center; 
+    text-align: center;
     margin-bottom: 8px;
 }
-footer .ft-heading h2{
+
+footer .ft-heading h2 {
     padding-top: 32px;
 }
 
@@ -1123,9 +1124,6 @@ footer .popular-categories {
     display: flex;
     flex-direction: column;
 }
-
-
-
 
 /* the 4 catergories styling */
 .popular-categories>div {
@@ -1275,20 +1273,6 @@ footer .popular-categories {
 
 /* media querry``````````````````````````````````````````````````````````````` */
 @media screen and (min-width:768px) {
-
-    /* global variables for tablet*/
-    :root {
-
-
-        /* font sizes */
-        --font-size-heading-h1-32: 32px;
-        --font-size-subheading-24: 24px;
-        --font-size-heading-h3-18: 18px;
-        --font-size-paragraph-14: 16px;
-
-
-    }
-
     h2 {
         font-size: 40px;
         line-height: 40px;
@@ -1362,11 +1346,31 @@ footer .popular-categories {
         font-size: 18px;
     }
 
-    .desktop-ddlogo {
+    /* .desktop-ddlogo {
         position: absolute;
         top: 0;
         left: 50%;
         transform: translateX(-50%);
+    } */
+     /* placing logo on top doordash */
+    .alnctr-column{
+        flex-grow: 1;
+    }
+
+    /* .login-location-btn .llb-login-btn span::content{
+        content: "";
+    } */
+    .login-location-btn .llb-location-btn{
+        display: none;
+    }
+
+
+
+
+    /* <!---------------------------------- 4. Main navigations ----------------------------------> */
+    .mn-logo img {
+        height: 124px;
+        width: 124px;
     }
 
     /* <!---------------------------------- 5. Blog posts- Feed 1 / Everything you crave.... ----------------------------------> */
@@ -1470,6 +1474,16 @@ footer .popular-categories {
         margin-top: 20px;
     }
 
+    /* <!---------------------------------- 9. Blog posts- Feed 3 / Unlocking opportunity for Dashers and businesses----------------------------------> */
+    
+    /* adjusting the background colors using padding */
+    .blog-post .bc-first {
+        margin-bottom: -60px;
+    } 
+    .blog-post .bc-second {
+        padding-top: 80px;
+    }
+
     /* <!---------------------------------- 10. Tab bar / Get more from your neighborhood----------------------------------> */
     .tab-bar h2 {
         margin-bottom: 20px;
@@ -1491,26 +1505,28 @@ footer .popular-categories {
         text-align: left;
     }
 
-    footer .ft-heading .ft-hd{
+    footer .ft-heading .ft-hd {
         text-align: left;
     }
 
-    .web-links{
+    .web-links {
         flex-direction: row;
         justify-content: space-between;
-  
+
     }
-    .wl-category{
+
+    .wl-category {
         text-align: left;
     }
-    
+
     /* last block */
-    .last-block .terms-social-ln{
+    .last-block .terms-social-ln {
         display: flex;
         flex-direction: row-reverse;
         align-items: start;
     }
-    .terms-service{
+
+    .terms-service {
         margin-top: 0;
     }
 
