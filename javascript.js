@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
 /* changing login text to sign up for desktop in multiple places one in header and one in actions */
 
 const loginBtns = document.querySelectorAll(".loginbtn");
