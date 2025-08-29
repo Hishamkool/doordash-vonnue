@@ -71,7 +71,13 @@ const openAppBtns = document.querySelectorAll(".openappbtn");
 const loginBottom = document.querySelector('.login-location-btn .llb-login-btn span');
 
 function updateButtonText() {
-    if (window.innerWidth >= 768) {
+
+    if (window.innerWidth >= 960) {
+        loginBottom.textContent = "Sign in for saved address";
+
+    }
+
+    else if (window.innerWidth >= 768) {
         loginBtns.forEach(
             login => {
                 login.textContent = "Sign In";
@@ -84,9 +90,9 @@ function updateButtonText() {
         });
 
         loginBottom.textContent = "Sign In"
-        
-    } else {
-        
+
+    } else if (window.innerWidth <= 768) {
+
         loginBtns.forEach(
             login => {
                 login.textContent = "Login";
@@ -97,7 +103,7 @@ function updateButtonText() {
             open.textContent = "Open App";
             open.classList.add("open-btn");
         });
-        
+
         loginBottom.textContent = "Login"
     }
 }

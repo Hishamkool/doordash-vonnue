@@ -63,7 +63,7 @@
 
     font-family: var(--font-primary-tt-norms);
 
-    outline: 1px solid pink !important;
+    /* outline: 1px solid pink !important; */
 
 }
 
@@ -431,6 +431,7 @@ p {
 .mb-sub-content {
     display: flex;
     flex-direction: column;
+    width: 100%;
     align-items: center;
     justify-content: center;
 }
@@ -1400,7 +1401,8 @@ footer .popular-categories {
     }
 
     .mb-content .search-container {
-        display: block;
+        display: flex;
+
         width: 100%;
         width: 408px;
         height: 56px;
@@ -1490,15 +1492,14 @@ footer .popular-categories {
 
     /* padding top only for convenience blog card */
     .blog-post .blog-card.bc-cp {
+
         padding-top: 60px;
         margin-bottom: -40px;
     }
 
-
+    /* changing order or picture for blog cards    */
     .blog-post .blog-card:nth-of-type(odd) picture {
         order: 2;
-
-
     }
 
     .blog-post .blg-details h2 {
@@ -1686,12 +1687,35 @@ footer .popular-categories {
     .mb-content .heading h1 {
         flex: 1 0 auto;
         font-size: 40px;
+        line-height: 40px;
 
     }
 
 }
 
 @media screen and (min-width:960px) {
+
+    /* header  */
+    /* doordash logo */
+    .doordash-logo {
+        gap: 0;
+    }
+
+    .doordash-logo .icon img {
+        height: 24px;
+        width: 42px;
+    }
+
+    .doordash-logo .title img {
+        height: 18px;
+        width: 155px;
+
+    }
+
+    .doordash-logo .title {
+        margin: 0;
+        margin-left: 12px;
+    }
 
     /* disabling title in tab view*/
     .fn-ddlogo .title {
@@ -1742,51 +1766,63 @@ footer .popular-categories {
     }
 
     .terms-service {
-    column-gap: 16px;
+        column-gap: 16px;
+    }
+
+    .blg-details {
+        max-width: 400px;
     }
 
 }
 
 @media screen and (min-width:1024px) {
-
-    /*<!----------------------------------1. Header nav ------------------------------------>r */
-    /*  .fn-ddlogo .icon {
-        height: 40px;
-        width: max-content;
-        display: flex;
-        align-items: center;
-    } */
-
-
-
-
-    /* doordash logo */
-    .doordash-logo {
-        gap: 0;
-    }
-
-    .doordash-logo .icon img {
-        height: 24px;
-        width: 42px;
-    }
-
-    .doordash-logo .title img {
-        height: 18px;
-        width: 155px;
-
-    }
-
-    .doordash-logo .title {
-        margin: 0;
-        margin-left: 12px;
-    }
-
-    /*  */
     .blg-details {
         max-width: 400px;
     }
 
+}
 
+@media screen and (min-width:1184px) {
+    .main-navigations-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 96px 0;
+        padding: 12px;
+    }
 
+    .main-navigations-container .mn-block {
+        flex-direction: column;
+        min-width: revert;
+        margin: 0 17px;
+
+    }
+
+    .mn-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .mn-logo img {
+        height: 154px;
+        width: 154px;
+    }
+
+    .mn-block .details {
+        text-align: center;
+    }
+
+    .mn-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .mn-nav span {
+        font-size: 18px;
+    }
 
 }
