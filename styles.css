@@ -63,7 +63,7 @@
 
     font-family: var(--font-primary-tt-norms);
 
-    /* outline: 1px solid pink !important; */
+    outline: 1px solid pink !important;
 
 }
 
@@ -105,9 +105,9 @@ p {
 /* for aligning items center */
 .alnctr-column {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
 .alnctr-row {
@@ -267,6 +267,8 @@ p {
 .open-btn {
     color: white;
     text-align: center;
+    flex: 0 0 auto;
+
     background-color: var(--color-button-primary--background-red);
 }
 
@@ -325,7 +327,8 @@ p {
 /* search field inside floating navigations */
 .fn-search {
     flex: 0 1 auto;
-    min-width: 0;
+    max-width: 50%;
+    width: fit-content;
     padding: 6px 16px;
 }
 
@@ -337,7 +340,7 @@ p {
 
 /* login and open inside floating navigations */
 .fn-actions {
-    /* flex: 0 1 auto; */
+    flex: 0 1 auto;
     display: flex;
     flex-direction: row;
     gap: 8px;
@@ -417,6 +420,20 @@ p {
 
 
 
+.mb-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.mb-sub-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 .main-banner .heading {
     margin-bottom: 24px;
@@ -424,6 +441,11 @@ p {
     justify-content: center;
     line-height: 28px;
     letter-spacing: 0px;
+
+
+    max-width: 350px;
+    width: 100%;
+
 
 }
 
@@ -472,6 +494,11 @@ p {
 
 .search-field .search-icon {
     margin-right: 12px;
+}
+
+/* for swaping images when responsive */
+.search-icon .img2 {
+    display: none;
 }
 
 .search-field .input-address {
@@ -942,6 +969,11 @@ p {
 .blog-post .bp-hd h1 {
     text-align: center;
     max-width: 300px;
+    font-family: var(--font-primary-tt-norms), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.01px;
 
 }
 
@@ -971,16 +1003,20 @@ p {
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 100%;
     background-color: var(--color-text-color-white);
     padding-bottom: 24px;
+    /*  justify-content: center;
+    align-items: center; */
 
 }
 
 .tabbar-head a {
+
     width: 33.33%;
     height: 40px;
-    justify-content: center;
-    align-items: center;
+    /*   justify-content: start;
+    align-items: center; */
     text-align: center;
     border-bottom: 3px solid transparent;
     color: #606060ff;
@@ -1123,6 +1159,7 @@ footer .popular-categories {
     padding-bottom: 32px;
     display: flex;
     flex-direction: column;
+    /*   gap: 12px; */
 }
 
 /* the 4 catergories styling */
@@ -1130,8 +1167,14 @@ footer .popular-categories {
     display: flex;
     flex-direction: column;
     flex: 1 1 0%;
-    gap: 12px;
+    gap: 8px;
+    /*  margin-top: 8px; */
+    /*  */
     /* justify-content: space-between; */
+}
+
+.popular-categories>div> :first-child {
+    margin-top: 8px;
 }
 
 /* links style */
@@ -1212,7 +1255,7 @@ footer .popular-categories {
 
 .language-drop-down {
 
-    padding: 0 12px;
+    padding: 12px;
 
 }
 
@@ -1272,6 +1315,12 @@ footer .popular-categories {
 
 
 /* media querry``````````````````````````````````````````````````````````````` */
+@media screen and (min-width:481px) {
+    .tab-bar {
+        padding: 48px 0;
+    }
+}
+
 @media screen and (min-width:768px) {
     h2 {
         font-size: 40px;
@@ -1332,11 +1381,59 @@ footer .popular-categories {
     /* background image height */
     .main-banner {
         height: 650px;
+        background-image: url("assets/images/png/hero_desktop.png");
+
     }
 
-    .alnctr-column .heading {
-        max-width: 350px;
+    .doordash-logo {
+        margin: 24px 0;
     }
+
+    .mb-content .heading {
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .mb-content .heading h1 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .mb-content .search-container {
+        display: block;
+        width: 100%;
+        width: 408px;
+        height: 56px;
+        /* background-color: yellow; */
+        border: 1px solid white;
+    }
+
+    .mb-content .search-container:focus {
+        border: 1px solid #4969f5ff;
+    }
+
+    .search-container .search-field {
+        /* padding: 0; */
+        padding: 4px;
+        padding-left: 20px;
+        justify-content: start;
+        flex-grow: 1;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .search-icon .img1 {
+        display: none;
+    }
+
+    .search-icon .img2 {
+        display: block;
+    }
+
+    .search-field .input-address {
+        flex: 1 0 auto;
+    }
+
 
     .actions .loginbtn {
         font-size: 18px;
@@ -1352,15 +1449,19 @@ footer .popular-categories {
         left: 50%;
         transform: translateX(-50%);
     } */
-     /* placing logo on top doordash */
-    .alnctr-column{
+    /* placing logo on top doordash */
+    .mb-content {
+        /*    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; */
         flex-grow: 1;
     }
 
     /* .login-location-btn .llb-login-btn span::content{
         content: "";
     } */
-    .login-location-btn .llb-location-btn{
+    .login-location-btn .llb-location-btn {
         display: none;
     }
 
@@ -1373,11 +1474,26 @@ footer .popular-categories {
         width: 124px;
     }
 
+    .mn-logo {
+        margin-right: 64px;
+    }
+
+    .main-navigations-container {
+        margin: 32px 0;
+    }
+
     /* <!---------------------------------- 5. Blog posts- Feed 1 / Everything you crave.... ----------------------------------> */
     .blog-post .blog-card {
         flex-direction: row;
         gap: 60px;
     }
+
+    /* padding top only for convenience blog card */
+    .blog-post .blog-card.bc-cp {
+        padding-top: 60px;
+        margin-bottom: -40px;
+    }
+
 
     .blog-post .blog-card:nth-of-type(odd) picture {
         order: 2;
@@ -1398,12 +1514,18 @@ footer .popular-categories {
     }
 
     .blog-post .blg-details p {
+        margin-top: 20px;
         font-size: 16px;
         line-height: 22px;
     }
 
+    .blog-post .blg-details .bd-fistp {
+        margin-top: 10px;
+    }
+
     .blog-btn {
         margin-top: 30px;
+        min-height: 40px;
     }
 
     .blog-btn h4 {
@@ -1438,7 +1560,7 @@ footer .popular-categories {
 
     .contents span {
         font-size: 16px;
-        line-height: 20px;
+        line-height: 22px;
     }
 
     /* <!---------------------------------- 8. Grid Posts / Helping you with to-dos and gifting ----------------------------------> */
@@ -1475,11 +1597,24 @@ footer .popular-categories {
     }
 
     /* <!---------------------------------- 9. Blog posts- Feed 3 / Unlocking opportunity for Dashers and businesses----------------------------------> */
-    
+
     /* adjusting the background colors using padding */
     .blog-post .bc-first {
         margin-bottom: -60px;
-    } 
+    }
+
+    .blog-post .bp-hd {
+        padding: 60px 20px 40px;
+    }
+
+    .blog-post .bp-hd h1 {
+        max-width: 500px;
+        text-align: center;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+
     .blog-post .bc-second {
         padding-top: 80px;
     }
@@ -1487,8 +1622,8 @@ footer .popular-categories {
     /* <!---------------------------------- 10. Tab bar / Get more from your neighborhood----------------------------------> */
     .tab-bar h2 {
         margin-bottom: 20px;
-        font-size: 18px;
-        line-height: 22px;
+        /*       font-size: 18px;
+        line-height: 22px; */
     }
 
     .tab-content {
@@ -1526,6 +1661,12 @@ footer .popular-categories {
         align-items: start;
     }
 
+    .language-drop-down {
+
+        padding: 0 12px;
+
+    }
+
     .terms-service {
         margin-top: 0;
     }
@@ -1534,47 +1675,118 @@ footer .popular-categories {
 
 
 
+@media screen and (min-width:769px) {
 
+    /*  <!----------------------------------2. Main banner ----------------------------------> */
+    .mb-content .heading {
+        width: 100%;
+        max-width: 750px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (min-width:1200px) {
-
-    /* <!----------------------------------2. Main banner ----------------------------------> */
-    /* changing background image for desktop */
-    .main-banner {
-        background-image: url("assets/images/png/hero_desktop.png");
+    .mb-content .heading h1 {
+        flex: 1 0 auto;
+        font-size: 40px;
 
     }
+
+}
+
+@media screen and (min-width:960px) {
+
+    /* disabling title in tab view*/
+    .fn-ddlogo .title {
+        display: block;
+    }
+
+    .floating-header .fn-ddlogo .title {
+        margin-left: 0;
+
+    }
+
+    .floating-header .doordash-logo {
+        gap: 8px;
+    }
+
+    /* title sizing */
+    .floating-header .fn-ddlogo .title img {
+        height: 13px;
+        width: 112px;
+    }
+
+    .floating-header .fn-ddlogo .icon img {
+        height: 18px;
+        width: 32px;
+    }
+
+
+
+    /* footer */
+    footer .ft-hd {
+        text-align: left;
+    }
+
+    .links-download-btn {
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+
+    .links-download-btn .web-links {
+        flex: 1 1 0%;
+    }
+
+    .links-download-btn .appstore-buttons {
+        flex: 1 1 0%;
+        align-items: flex-end;
+        /* justify-content: end; */
+    }
+
+    .terms-service {
+    column-gap: 16px;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+
+    /*<!----------------------------------1. Header nav ------------------------------------>r */
+    /*  .fn-ddlogo .icon {
+        height: 40px;
+        width: max-content;
+        display: flex;
+        align-items: center;
+    } */
+
+
+
+
+    /* doordash logo */
+    .doordash-logo {
+        gap: 0;
+    }
+
+    .doordash-logo .icon img {
+        height: 24px;
+        width: 42px;
+    }
+
+    .doordash-logo .title img {
+        height: 18px;
+        width: 155px;
+
+    }
+
+    .doordash-logo .title {
+        margin: 0;
+        margin-left: 12px;
+    }
+
+    /*  */
+    .blg-details {
+        max-width: 400px;
+    }
+
+
+
+
 }

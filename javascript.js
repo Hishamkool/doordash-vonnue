@@ -26,11 +26,11 @@ seeMoreBtn.addEventListener("click", k => {
     });
     arrow.classList.toggle('open');
     if (hiddenList[0].classList.contains('enable')) {
-        seeMoreText.textContent = "See Less";
+        seeMoreText.textContent = "See less";
 
     } else {
 
-        seeMoreText.textContent = "See More";
+        seeMoreText.textContent = "See more";
     }
 
     /* moving see more to the end of the list */
