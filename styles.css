@@ -63,7 +63,7 @@
 
     font-family: var(--font-primary-tt-norms);
 
-    /* outline: 1px solid pink !important; */
+    outline: 1px solid pink;
 
 }
 
@@ -695,21 +695,31 @@ p {
 
 }
 
+.blog-post .blog-card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+}
+
+
 
 /* card */
 .blog-post .blog-card {
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    min-width: 90%;
+    /* padding: 20px; */
+
     align-items: center;
-    /* justify-content: start;
-    text-align: left; */
+    justify-content: center;
+
 }
 
 /* negative padding on the first child */
 .blog-post .bc-first {
     margin-bottom: -300px;
+    z-index: 1;
 }
 
 /* second blog post with a background on second child */
@@ -720,6 +730,7 @@ p {
 
 /* img container */
 .blog-post picture {
+
     width: 100%;
 }
 
@@ -728,6 +739,7 @@ p {
     width: 100%;
     height: 180px;
     object-fit: cover;
+    padding-bottom: 4px;
 }
 
 /* title subtile and button */
@@ -914,9 +926,9 @@ p {
 
 }
 
-.grid-card picture {
+/* .grid-card picture {
     width: 100%;
-}
+} */
 
 .grid-card .grd-details {
     text-align: center;
@@ -958,7 +970,7 @@ p {
 
 /*<!---------------------------------- 9. Blog posts- Feed 3 / Unlocking opportunity for Dashers and businesses----------------------------------> */
 /* heading container */
-.blog-post .bp-hd {
+.bp-hd {
     padding: 40px 20px 20px;
     width: 100%;
     background-color: var(--color-text-color-white);
@@ -1127,12 +1139,19 @@ p {
 footer {
     width: 100vw;
     background-color: var(--color-text-default-black);
-    padding: 0 20px;
     margin: auto;
 
 }
 
+footer .test {
+
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
 footer .ft-wdt {
+    padding: 0 20px;
     max-width: 1160px;
     display: flex;
     flex-direction: column;
@@ -1407,7 +1426,7 @@ footer .popular-categories {
         width: 408px;
         height: 56px;
         /* background-color: yellow; */
-        border: 1px solid white;
+
     }
 
     .mb-content .search-container:focus {
@@ -1491,15 +1510,22 @@ footer .popular-categories {
     }
 
     /* padding top only for convenience blog card */
-    .blog-post .blog-card.bc-cp {
+    .blog-post .bc-cp {
 
         padding-top: 60px;
         margin-bottom: -40px;
     }
 
     /* changing order or picture for blog cards    */
-    .blog-post .blog-card:nth-of-type(odd) picture {
+    /*  .blog-post .blog-card:nth-of-type(odd) picture {
         order: 2;
+    } */
+    /* .blog-card-container:nth-child(even) picture {
+        order: 2;
+    } */
+    .blog-post .blog-card-container:nth-of-type(odd) article picture {
+        order: 2;
+
     }
 
     .blog-post .blg-details h2 {
@@ -1604,11 +1630,11 @@ footer .popular-categories {
         margin-bottom: -60px;
     }
 
-    .blog-post .bp-hd {
+    .bp-hd {
         padding: 60px 20px 40px;
     }
 
-    .blog-post .bp-hd h1 {
+      .bp-hd h1 {
         max-width: 500px;
         text-align: center;
         font-size: 32px;
@@ -1623,8 +1649,8 @@ footer .popular-categories {
     /* <!---------------------------------- 10. Tab bar / Get more from your neighborhood----------------------------------> */
     .tab-bar h2 {
         margin-bottom: 20px;
-        /*       font-size: 18px;
-        line-height: 22px; */
+        font-size: 18px;
+        line-height: 22px;
     }
 
     .tab-content {
@@ -1659,7 +1685,7 @@ footer .popular-categories {
     .last-block .terms-social-ln {
         display: flex;
         flex-direction: row-reverse;
-        align-items: start;
+
     }
 
     .language-drop-down {
@@ -1742,6 +1768,24 @@ footer .popular-categories {
         width: 32px;
     }
 
+    /* tabbar */
+    .tab-content {
+        margin-bottom: 12px;
+        /* or gap between tab content and see more */
+    }
+
+    .tab-bar .tabbar-head a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* .tab-bar h2 {
+        font-size: 18px;
+        line-height: 22px;
+    } */
+
+
 
 
     /* footer */
@@ -1783,6 +1827,23 @@ footer .popular-categories {
 }
 
 @media screen and (min-width:1184px) {
+
+    /* blog cards */
+    .blog-post {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .blog-card {
+        max-width: 1184px;
+    }
+
+    /* .blog-card {
+        max-width: 1184px;
+    } */
+
     .main-navigations-container {
         flex-direction: row;
         justify-content: center;
@@ -1793,8 +1854,9 @@ footer .popular-categories {
 
     .main-navigations-container .mn-block {
         flex-direction: column;
-        min-width: revert;
-        margin: 0 17px;
+        min-width: 360px;
+        /* margin: 0 17px; */
+        flex-flow: column wrap;
 
     }
 
@@ -1802,7 +1864,11 @@ footer .popular-categories {
         display: flex;
         align-items: center;
         justify-content: center;
-        
+
+    }
+
+    .mn-subtitile {
+        margin-top: 8px;
     }
 
     .mn-logo img {
@@ -1824,5 +1890,37 @@ footer .popular-categories {
     .mn-nav span {
         font-size: 18px;
     }
+
+    /* grid */
+    .grid-posts {
+
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .grid-posts .grid-post-scroll {
+        max-width: 1184px; 
+
+    }
+    .grid-card picture img{
+        min-height: 552px;
+    }
+    .grid-posts .grid-post-scroll .grd-details span.must-be {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    /* footer */
+    footer .ft-wdt {
+        margin: 0 12px;
+        width: 1184px;
+    }
+
+    .last-block .terms-social-ln {
+        align-items: center;
+    }
+
 
 }

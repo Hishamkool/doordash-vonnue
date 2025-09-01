@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             floatingHeader.classList.remove("visible");
         }
-        console.log("page scrolled");
+        console.log("page scrolled:",window.scrollY);
     });
 });
 
@@ -72,12 +72,59 @@ const loginBottom = document.querySelector('.login-location-btn .llb-login-btn s
 
 function updateButtonText() {
 
-    if (window.innerWidth >= 960) {
+
+    if (window.innerWidth < 768) {
+        // change floating action buttons and mainbanner buttons .loginbutton = ogin and open app
+        loginBtns.forEach(login => {
+            login.textContent = "Login";
+            login.classList.remove("open-btn"); /* to change the backgroud color  */
+
+        });
+
+        openAppBtns.forEach(openApp => {
+            openApp.textContent = "Open App";
+            openApp.classList.add("open-btn");
+        });
+        loginBottom.textContent = "Login";
+    }
+    else if (window.innerWidth >= 768 && window.innerWidth <= 960) {
+        // need to change it to signin and signup
+        loginBtns.forEach(login => {
+            login.textContent = "Sign In";
+            login.classList.add("open-btn"); /* to change the backgroud color  */
+
+        });
+
+        openAppBtns.forEach(openApp => {
+            openApp.textContent = "Sign Up";
+            openApp.classList.remove("open-btn");
+        });
+        loginBottom.textContent = "Sign In";
+    }
+    // more than 960px
+    else {
+        // signin and signup and then llb login btn span to : sign in for saved address
+        loginBtns.forEach(login => {
+            login.textContent = "Sign In";
+            login.classList.add("open-btn"); /* to change the backgroud color  */
+
+        });
+
+        openAppBtns.forEach(openApp => {
+            openApp.textContent = "Sign Up";
+            openApp.classList.remove("open-btn");
+        });
         loginBottom.textContent = "Sign in for saved address";
 
     }
 
-    else if (window.innerWidth >= 768) {
+
+    /* if (window.innerWidth >= 960) {
+        loginBottom.textContent = "Sign in for saved address";
+
+    }
+
+    if (window.innerWidth >= 768) {
         loginBtns.forEach(
             login => {
                 login.textContent = "Sign In";
@@ -105,7 +152,7 @@ function updateButtonText() {
         });
 
         loginBottom.textContent = "Login"
-    }
+    } */
 }
 updateButtonText();
 
