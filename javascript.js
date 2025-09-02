@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             floatingHeader.classList.remove("visible");
         }
-        console.log("page scrolled:",window.scrollY);
+        console.log("page scrolled:", window.scrollY);
     });
 });
 
@@ -119,41 +119,9 @@ function updateButtonText() {
     }
 
 
-    /* if (window.innerWidth >= 960) {
-        loginBottom.textContent = "Sign in for saved address";
-
-    }
-
-    if (window.innerWidth >= 768) {
-        loginBtns.forEach(
-            login => {
-                login.textContent = "Sign In";
-                login.classList.add("open-btn");
-            }
-        );
-        openAppBtns.forEach(open => {
-            open.textContent = "Sign Up";
-            open.classList.remove("open-btn");
-        });
-
-        loginBottom.textContent = "Sign In"
-
-    } else if (window.innerWidth <= 768) {
-
-        loginBtns.forEach(
-            login => {
-                login.textContent = "Login";
-                login.classList.remove("open-btn");
-            }
-        );
-        openAppBtns.forEach(open => {
-            open.textContent = "Open App";
-            open.classList.add("open-btn");
-        });
-
-        loginBottom.textContent = "Login"
-    } */
 }
 updateButtonText();
 
 window.addEventListener("resize", updateButtonText);
+
+

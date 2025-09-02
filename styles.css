@@ -63,8 +63,7 @@
 
     font-family: var(--font-primary-tt-norms);
 
-    /* outline: 1px solid pink; */
-
+    outline: 1px solid pink;
 }
 
 *,
@@ -72,6 +71,13 @@
 ::before {
     box-sizing: border-box;
 
+}
+
+picture img {
+    display: inline;
+    /* restore inline behavior */
+    vertical-align: baseline;
+    /* ensures it sits on baseline, leaving descender gap */
 }
 
 a {
@@ -194,6 +200,7 @@ p {
     justify-content: flex-start;
     gap: 8px;
     margin-top: 16px;
+    max-height: 80px;
 }
 
 .continue-app .logo-description {
@@ -204,9 +211,12 @@ p {
 
 .continue-app .title-description {
     flex-grow: 1;
+    height: 100%;
+
 }
 
-.continue-app .title-description span {
+.title-description .sub-title {
+    display: block;
     color: var(--color-text-subtitle-grey);
     font-size: 14px;
     font-weight: 500;
@@ -214,6 +224,23 @@ p {
     text-overflow: ellipsis;
     white-space: nowrap;
     letter-spacing: -0.01px;
+
+}
+
+.mp-st-bottom {
+    margin-left: 4px;
+    margin-top: 2px;
+}
+
+.continue-app .title-description .mp-text {
+    color: var(--color-text-subtitle-grey);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    letter-spacing: -0.01px;
+    margin-left: 4px;
 
 }
 
@@ -229,17 +256,32 @@ p {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    max-width: 100%;
     padding: 0;
     margin: 0;
-
+    line-height: 20px;
+    letter-spacing: -0.01px;
 }
 
 .stars {
-    margin: 0 2px;
-    margin-right: 6px;
-    padding: 0;
+    display: flex;
+    gap: 2px;
+    margin-right: 2px;
+    margin-left: 2px;
 }
+
+.ratings img {
+    display: inline-block;
+
+    width: 12px;
+
+    height: 12px;
+
+    margin: 0;
+
+    padding: 0;
+    line-height: 0;
+}
+
 
 
 /* base design for login open app and open */
@@ -277,13 +319,27 @@ p {
     border: 1px solid #f1f1f1ff;
     background-color: #ffffff;
     padding: 8px;
-
+    width: 60px;
+    height: 60px;
 }
 
 .logo img {
     width: 40px;
     height: 40px;
 }
+
+.logo-top {
+    display: block;
+    border-radius: 12px;
+    outline: 1px solid #f1f1f1ff;
+    background-color: #ffffff;
+}
+
+/* .logo-top img {
+    width: 64px;
+    height: 64px;
+} */
+
 
 
 /*  <!-- floating fixed header --> */
@@ -322,31 +378,40 @@ p {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
 }
 
 /* search field inside floating navigations */
 .fn-search {
     flex: 0 1 auto;
     max-width: 50%;
-    width: fit-content;
+    min-width: 0;
+
     padding: 6px 16px;
 }
 
 .fn-search .input-address {
-    flex: 0 1 auto;
+    flex: 1 1 auto;
+    max-width: 100%;
+
     min-width: 0;
 
 }
 
 /* login and open inside floating navigations */
 .fn-actions {
-    flex: 0 1 auto;
+    flex: 0 0 auto;
     display: flex;
     flex-direction: row;
     gap: 8px;
-    /* justify-content: flex-end; */
+    min-height: 52px;
+    height: 52px;
+    justify-content: flex-end;
 
+}
 
+.fn-actions .top-btn {
+    min-height: 52px;
 }
 
 .fn-search .arrow {
@@ -385,7 +450,7 @@ p {
     left: 0;
     right: 0;
     top: 0px;
-    margin-top: 16px;
+    margin-top: 15px;
     display: flex;
     justify-content: flex-end;
     padding-right: 24px;
@@ -474,6 +539,8 @@ p {
     padding: 6px 16px;
 }
 
+
+
 .search-field .arrow {
     min-height: 40px;
     border-radius: 9999px;
@@ -504,7 +571,7 @@ p {
 
 .search-field .input-address {
     border: none;
-    outline: none;
+    /* outline: none; */
     text-overflow: ellipsis;
     font-weight: 500;
     font-size: 16px;
@@ -557,7 +624,8 @@ p {
     margin: 0 auto;
     background-color: var(--color-background-strong-white);
     flex: 1 0 auto;
-    margin: 20px 20px 0;
+    /* margin: 20px 20px 0; */
+
     border-radius: 12px;
     border: 1px solid var(--color-background-light-white);
     padding: 20px;
@@ -584,6 +652,10 @@ p {
 
 .mobile-popup-bottom .continue-app .title-description h3 {
     font-size: 18px;
+}
+
+.mobile-popup-bottom .ratings {
+    margin-top: 2px;
 }
 
 
@@ -739,7 +811,7 @@ p {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    padding-bottom: 4px;
+    /* padding-bottom: 4px; */
 }
 
 /* title subtile and button */
@@ -905,6 +977,7 @@ p {
 }
 
 .grid-card {
+
     padding: 20px;
     min-width: 90%;
     display: flex;
@@ -915,9 +988,13 @@ p {
 
 }
 
+.grid-card picture {
+    width: 100%;
+}
+
 .grid-card picture img {
-    /*  height: 180px; */
-    height: 100%;
+    height: 180px;
+    /* height: 100%; */
     width: 100%;
     object-fit: cover;
     /* unnecessary padding but real website has this */
@@ -1364,6 +1441,10 @@ footer .popular-categories {
         display: none;
     }
 
+    .continue-app {
+        max-height: 80px;
+    }
+
     .floating-header {
         /* padding: 4px 8px; */
         padding: 0;
@@ -1395,6 +1476,15 @@ footer .popular-categories {
     /* to not display set in header */
     .floating-header .fn-search {
         display: none;
+    }
+
+    .fn-actions .top-btn {
+        max-height: 40px;
+        min-height: 0;
+    }
+    .fn-actions{
+        height: 40px;
+        min-height: 0;
     }
 
     /* <!----------------------------------2. Main banner ----------------------------------> */
@@ -1429,8 +1519,11 @@ footer .popular-categories {
 
     }
 
-    .mb-content .search-container:focus {
-        border: 1px solid #4969f5ff;
+
+
+    .search-container .search-field:focus-within {
+        border: 2px solid;
+        border-color: var(--color-text-default-black);
     }
 
     .search-container .search-field {
@@ -1634,7 +1727,7 @@ footer .popular-categories {
         padding: 60px 20px 40px;
     }
 
-      .bp-hd h1 {
+    .bp-hd h1 {
         max-width: 500px;
         text-align: center;
         font-size: 32px;
@@ -1700,7 +1793,19 @@ footer .popular-categories {
 
 }
 
+/* max width */
+@media screen and (max-width: 767px) {
+    .mobile-popup-bottom {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 
+    /* max width 767 pixels */
+}
 
 @media screen and (min-width:769px) {
 
@@ -1895,17 +2000,19 @@ footer .popular-categories {
     .grid-posts {
 
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
     }
 
     .grid-posts .grid-post-scroll {
-        max-width: 1184px; 
+        max-width: 1184px;
 
     }
-    .grid-card picture img{
+
+    .grid-card picture img {
         min-height: 552px;
     }
+
     .grid-posts .grid-post-scroll .grd-details span.must-be {
         font-size: 14px;
         font-weight: 500;
