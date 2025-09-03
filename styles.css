@@ -295,6 +295,7 @@ p {
     width: auto;
     display: inline-block;
     font-size: 16px;
+    line-height: 22px;
     color: rgb(25, 25, 25);
     font-weight: 700;
     letter-spacing: -0.01px;
@@ -384,7 +385,7 @@ p {
 /* search field inside floating navigations */
 .fn-search {
     flex: 0 1 auto;
-    max-width: 50%;
+    /* max-width: 50%; */
     min-width: 0;
 
     padding: 6px 16px;
@@ -1607,12 +1608,7 @@ footer .popular-categories {
         font-size: 18px;
     }
 
-    /* .desktop-ddlogo {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    } */
+
     /* placing logo on top doordash */
     .mb-content {
         /*    display: flex;
@@ -1771,7 +1767,12 @@ footer .popular-categories {
 
     .grid-posts .grid-post-scroll .grd-details span.must-be {
         margin-top: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
     }
+
+     
 
     /* <!---------------------------------- 9. Blog posts- Feed 3 / Unlocking opportunity for Dashers and businesses----------------------------------> */
 
@@ -1823,6 +1824,10 @@ footer .popular-categories {
     footer .ft-heading .ft-hd {
         text-align: left;
     }
+    footer .ft-hd{
+        text-align: left;
+
+    }
 
     .web-links {
         flex-direction: row;
@@ -1856,7 +1861,8 @@ footer .popular-categories {
 /* max width */
 @media screen and (max-width: 767px) {
     .mobile-popup-bottom {
-        max-width: 400px;
+        max-width: 360px;
+        /* max-width: 400px; */
         margin: 0 auto;
         margin-top: 20px;
         margin-bottom: 0;
@@ -2069,11 +2075,7 @@ footer .popular-categories {
         min-height: 552px;
     }
 
-    .grid-posts .grid-post-scroll .grd-details span.must-be {
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 20px;
-    }
+
 
     /* footer */
     footer .ft-wdt {
