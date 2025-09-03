@@ -1746,6 +1746,7 @@ footer .popular-categories {
     .grid-posts .grid-post-scroll {
         flex-wrap: wrap;
         width: 100%;
+         overflow-x: hidden; 
         /* max-width: 1184px; */
     }
 
