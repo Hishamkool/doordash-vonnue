@@ -170,7 +170,7 @@ p {
 .tb-hed-16-22-700 {
     color: var(--color-text-default-black);
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 22px;
     letter-spacing: -0.01;
     text-decoration: none;
@@ -615,6 +615,14 @@ p {
 }
 
 /* <!---------------------------------- 3. Continue in mobile container / Browse faster in app ----------------------------------> */
+/* container for bootom popup */
+.mobile-popup-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
 
 /* for bottom banner/popup  */
 .mobile-popup-bottom {
@@ -652,6 +660,7 @@ p {
 
 .mobile-popup-bottom .continue-app .title-description h3 {
     font-size: 18px;
+    line-height: 20px;
 }
 
 .mobile-popup-bottom .ratings {
@@ -814,6 +823,13 @@ p {
     /* padding-bottom: 4px; */
 }
 
+.blog-card-container picture img {
+    display: block;
+
+    margin-bottom: 4px;
+
+}
+
 /* title subtile and button */
 .blg-details {
     text-align: left;
@@ -964,9 +980,12 @@ p {
 }
 
 /* heading style */
-.gp-hd h1 {
-    max-width: 300px;
+
+.grid-posts .gp-hd h2 {
     text-align: center;
+    max-width: 300px;
+    font-size: 24px;
+    line-height: 28px;
 }
 
 /* scroll continer with multiple cards */
@@ -1053,10 +1072,11 @@ p {
     background-color: var(--color-text-color-white);
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 /* heading style */
-.blog-post .bp-hd h1 {
+.bp-hd h1 {
     text-align: center;
     max-width: 300px;
     font-family: var(--font-primary-tt-norms), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -1083,9 +1103,11 @@ p {
     text-align: center;
     margin-bottom: 20px;
     color: var(--color-text-default-black);
-    font-size: 32px;
+    /*  font-size: 32px; */
+    /* line-height: 40px; */
+    font-size: 18px;
+    line-height: 22px;
     font-weight: 700;
-    line-height: 40px;
     display: block;
 }
 
@@ -1096,8 +1118,7 @@ p {
     height: 100%;
     background-color: var(--color-text-color-white);
     padding-bottom: 24px;
-    /*  justify-content: center;
-    align-items: center; */
+
 
 }
 
@@ -1117,6 +1138,7 @@ p {
 .tabbar-head a:focus,
 .tabbar-head a:active,
 .tabbar-head a.selected {
+    font-weight: 700;
     border-bottom: 3px solid var(--color-text-default-black);
     color: var(--color-text-default-black);
 }
@@ -1128,6 +1150,7 @@ p {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 16px;
     width: 100%;
+    padding-bottom: 12px;
 }
 
 
@@ -1220,14 +1243,15 @@ footer {
 
 }
 
-footer .test {
 
+footer .ft-wdt-container {
     display: flex;
-    /* align-items: center; */
     justify-content: center;
+
 }
 
 footer .ft-wdt {
+    width: 100%;
     padding: 0 20px;
     max-width: 1160px;
     display: flex;
@@ -1340,7 +1364,7 @@ footer .popular-categories {
     flex-direction: column;
     text-align: center;
     padding: 32px 0;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
 }
 
@@ -1348,6 +1372,8 @@ footer .popular-categories {
 .terms-social-ln .social-icons {
     display: flex;
     gap: 12px;
+    align-items: start;
+    justify-content: center;
 }
 
 .language-drop-down {
@@ -1361,7 +1387,8 @@ footer .popular-categories {
     background-color: white;
     display: inline-flex;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: center; */
+    padding: 4px 12px;
     align-items: center;
     border-radius: 16px;
     width: 150px;
@@ -1373,8 +1400,10 @@ footer .popular-categories {
 }
 
 .lan-dd-btn img {
+
     width: 24px;
     height: 24px;
+
 }
 
 .lan-dd-btn span {
@@ -1382,6 +1411,7 @@ footer .popular-categories {
     font-weight: 500;
     line-height: 20px;
     letter-spacing: -0.01;
+    white-space: nowrap;
 }
 
 /* terms and services */
@@ -1392,9 +1422,10 @@ footer .popular-categories {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    column-gap: 12px;
-    /* either set this or use margin left for each element >a */
+
+    /* either set colum gap or use margin left for each element >a */
 }
+
 
 .terms-service a {
     color: rgb(196, 196, 196);
@@ -1403,6 +1434,16 @@ footer .popular-categories {
     line-height: 18px;
 }
 
+/* to remove the margin left for the first child */
+.terms-service a:not(:first-child) {
+    margin-left: 16px;
+}
+
+/* to adjust margin left only for last child : copyright */
+/* .copyright { 
+    margin-left: 16px;
+}
+ */
 
 
 
@@ -1412,10 +1453,17 @@ footer .popular-categories {
 
 
 /* media querry``````````````````````````````````````````````````````````````` */
-@media screen and (min-width:481px) {
+@media screen and (min-width: 481px) {
     .tab-bar {
         padding: 48px 0;
     }
+
+    .tab-bar .tabbar-head a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
 }
 
 @media screen and (min-width:768px) {
@@ -1482,7 +1530,8 @@ footer .popular-categories {
         max-height: 40px;
         min-height: 0;
     }
-    .fn-actions{
+
+    .fn-actions {
         height: 40px;
         min-height: 0;
     }
@@ -1551,6 +1600,7 @@ footer .popular-categories {
 
     .actions .loginbtn {
         font-size: 18px;
+        /* line-height: 22px; */
     }
 
     .actions .openappbtn {
@@ -1693,6 +1743,7 @@ footer .popular-categories {
         max-width: 500px;
         text-align: center;
         font-size: 32px;
+        line-height: 40px;
 
     }
 
@@ -1706,6 +1757,12 @@ footer .popular-categories {
         max-width: 50%;
         min-width: 50%;
         margin: 0;
+    }
+
+    .grid-card picture img {
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        margin-bottom: 0;
     }
 
     .grd-details p {
@@ -1724,7 +1781,10 @@ footer .popular-categories {
     }
 
     .bp-hd {
+
         padding: 60px 20px 40px;
+
+
     }
 
     .bp-hd h1 {
@@ -1874,16 +1934,13 @@ footer .popular-categories {
     }
 
     /* tabbar */
-    .tab-content {
-        margin-bottom: 12px;
-        /* or gap between tab content and see more */
-    }
+    /*  .tab-content {
+        margin-bottom: 12px; 
+    } */
+    /* already given padding */
+    /* or gap between tab content and see more */
 
-    .tab-bar .tabbar-head a {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+
 
     /* .tab-bar h2 {
         font-size: 18px;
@@ -1914,9 +1971,7 @@ footer .popular-categories {
         /* justify-content: end; */
     }
 
-    .terms-service {
-        column-gap: 16px;
-    }
+
 
     .blg-details {
         max-width: 400px;
@@ -1994,6 +2049,7 @@ footer .popular-categories {
 
     .mn-nav span {
         font-size: 18px;
+        line-height: 22px;
     }
 
     /* grid */
@@ -2025,9 +2081,7 @@ footer .popular-categories {
         width: 1184px;
     }
 
-    .last-block .terms-social-ln {
-        align-items: center;
-    }
+
 
 
 }
